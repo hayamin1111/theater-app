@@ -1,0 +1,41 @@
+[
+  {
+    "id": "screening-001",
+    "date": "2026-06-01",
+    "startTime": "10:00",
+    "endTime": "12:15",
+    "title": "Project Nova",
+    "genre": "sf",
+    "rating": "PG12",
+    "screen": 1,
+    "format": ["subtitled", "4k"],
+    "description": "A sci-fi mystery set on Europa.",
+    "salesStatus": "few-left"
+  }, 
+  {
+    "id": "screening-002",
+    "date": "2026-06-01",
+    "startTime": "13:00",
+    "endTime": "15:30",
+    "title": "The Last Melody",
+    "genre": "drama",
+    "rating": "R15+",
+    "screen": 2,
+    "format": ["dubbed", "3D"],
+    "description": "A heartwarming story of a musician's final performance.",
+    "salesStatus": "available"
+  }, 
+  {
+    "id": "screening-003",
+    "date": "2026-06-01",
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "title": "Laugh Riot",
+    "genre": "comedy",
+    "rating": "G",
+    "screen": 3,
+    "format": ["subtitled", "2D"],
+    "description": "A hilarious comedy about a group of friends on a road trip.",
+    "salesStatus": "sold-out"
+  } 
+]
