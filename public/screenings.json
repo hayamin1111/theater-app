@@ -37,5 +37,31 @@
     "format": ["subtitled", "2D"],
     "description": "A hilarious comedy about a group of friends on a road trip.",
     "salesStatus": "sold-out"
+  },
+  {
+    "id": "screening-004",
+    "date": "2026-06-01",
+    "startTime": "19:00",
+    "endTime": "21:30",
+    "title": "Haunted Manor",
+    "genre": "horror",
+    "rating": "R15+",
+    "screen": 4,
+    "format": ["dubbed", "4k"],
+    "description": "A chilling horror film set in a haunted mansion.",
+    "salesStatus": "available"
+  },
+  {
+    "id": "screening-005",
+    "date": "2026-06-01",
+    "startTime": "22:00",
+    "endTime": "00:30",
+    "title": "Midnight Chase",
+    "genre": "action",
+    "rating": "PG12",
+    "screen": 5,
+    "format": ["subtitled", "3D"],
+    "description": "An adrenaline-pumping action film about a high-speed chase through the city.",
+    "salesStatus": "few-left"
   } 
 ]
