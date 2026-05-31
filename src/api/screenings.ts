@@ -1,4 +1,4 @@
-import type { Screening } from '@/types/screenings';
+import type { Screening } from '@/types/screening';
 
 /**
  * json取得し使えるデータとして返す関数

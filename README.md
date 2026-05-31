@@ -26,14 +26,14 @@ npm run build
 ```text
 src/
 ├ components/ - 画面に出るUI
-│  ├ DateTabs.tsx - 日付切り替え
-│  ├ SearchMovie.tsx - 検索
-│  ├ FilterMovie.tsx - 絞り込み
-│  ├ Timetable.tsx - タイムテーブル
-│  ├ MovieCell.tsx - セル本体
-│  ├ MovieCellContent.tsx - セル内表示
-│  ├ MovieDetailModal.tsx - 詳細モーダル
-│  └ EmptyState.tsx - 上映なし
+│  ├ DateTabs - 日付切り替え
+│  ├ SearchMovie - 検索
+│  ├ FilterMovie - 絞り込み
+│  ├ Timetable - タイムテーブル
+│  ├ MovieCell - セル本体
+│  ├ MovieCellContent - セル内表示
+│  ├ MovieDetailModal - 詳細モーダル
+│  └ EmptyState - 上映なし
 ├ types/ - 型定義
 │  └ screening.ts 
 ├ utils/ - Reactに依存しない普通の関数

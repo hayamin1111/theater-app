@@ -1,4 +1,5 @@
-import type { Screening } from '@/types/screenings';
+import type { Screening } from '@/types/screening';
+import { GENRES, SALES_STATUS } from '@/constants/screenings';
 import styles from './index.module.css';
 
 type Props = {
@@ -42,6 +43,8 @@ export const Timetable = ({ screenings }: Props) => {
           >
             <p>{screening.startTime} - {screening.endTime}</p>
             <h3>{screening.title}</h3>
+            <p>{SALES_STATUS[screening.salesStatus]}</p>
+            <p>{GENRES[screening.genre]}</p>
           </article>
         );
       })}

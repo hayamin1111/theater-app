@@ -1,3 +1,10 @@
+// 定数から生成した型をimport
+import type {
+  SalesStatus,
+  Genre,
+  Format,
+} from '@/constants/screenings';
+
 // 上映映画1つの型定義
 export type Screening = {
   id: string;
@@ -14,28 +21,9 @@ export type Screening = {
   thumbnail: string;
 };
 
-
-// ジャンル、レーティング、フォーマット、販売状況の型定義
-type Genre = 
-  | "sf"
-  | "mystery"
-  | "animation"
-  | "drama"
-  | "documentary";
-
+// レーティングの型定義
 type Rating =
   | "G"
   | "PG12"
   | "R15+"
   | "R18+";
-
-type Format =
-  | "subtitled"
-  | "dubbed"
-  | "4k"
-  | "talk-event";
-
-type SalesStatus =
-  | "on-sale"
-  | "sold-out"
-  | "coming-soon";
