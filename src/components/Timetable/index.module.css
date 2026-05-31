@@ -1,0 +1,16 @@
+.timetable {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  grid-auto-rows: 48px;
+  position: relative;
+}
+
+.time-label {
+  grid-column: 1;
+}
+
+.screening-cell {
+  padding: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}

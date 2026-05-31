@@ -40,8 +40,9 @@ src/
 │  ├ filterScreenings.ts - フィルタリング
 │  ├ sortScreenings.ts - 検索
 │  └ calculateMovieCellPosition.ts - セルの位置決め
+├ App.tsx - state管理と接続
 public/
-└ screenings.json - ダミーJASON
+└ screenings.json - ダミーJSON
 ```
 
 ## state
