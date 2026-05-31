@@ -6,7 +6,7 @@ import './App.css';
  * json取得し使えるデータとして返す関数
  */
 const fetchScreenings = async (): Promise<Screening[]> => {  
-  const response = await fetch('./screenings.json');
+  const response = await fetch('https://6a1bba358858a003817b32b2.mockapi.io/screenings');
   
   if (!response.ok) {
     throw new Error("データ取得に失敗しました");
@@ -41,14 +41,27 @@ function App() {
 
   return (
     <>
-     <p>テスト</p>
       {
-        
         screenings.map((screening) => (
-          <div key={screening.id}>
-            <p>{screening.title}</p>
+          <article key={screening.id}>
             <p>{screening.date}</p>
-          </div>
+            <p>
+              {screening.startTime} - {screening.endTime}
+            </p>
+            <h2>{screening.title}</h2>
+            <p>{screening.genre}</p>
+            <p>{screening.rating}</p>
+            <p>Screen {screening.screen}</p>
+
+            <ul>
+              {screening.format.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <p>{screening.description}</p>
+            <p>{screening.salesStatus}</p>
+          </article>
         ))
       }
     </>

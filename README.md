@@ -56,6 +56,10 @@ public/
 |MovieDetailModal|screening, onClose|詳細表示・閉じる|
 |EmptyState|message|上映なし表示|
 
+
+## API
+mockapi.io（ https://mockapi.io ）にて作成。
+
 ---
 
 # React + TypeScript + Vite
