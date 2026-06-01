@@ -30,7 +30,7 @@ export const Timetable = ({ screenings }: Props) => {
       {screenings.map((screening) => {
         const rowStart = timeToRow(screening.startTime);
         const rowEnd = timeToRow(screening.endTime);
-        const column = screening.screen + 1; //1列目は時間が入るため+1とする
+        const column = screening.screen + 1; //1列目は上映時間が入るため+1とする
 
         return (
           <article

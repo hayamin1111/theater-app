@@ -7,18 +7,27 @@ import '@/App.css';
 
 function App() {
   const [screenings, setScreenings] = useState<Screening[]>([]);
-  // const [selectedDate, setSelectedDate] = useState<string>('2026-06-01');
-  const set = new Set(screenings.map(screening => screening.date));
-  const dates = [...set]; //重複をなくした日付
-  console.log(dates)
+  const dates = [...new Set(screenings.map(screening => screening.date))]; //重複をなくした日付
+  const [selectedDate, setSelectedDate] = useState<string>("");// 生dataから初日の日付を取得し、stateの初期値に入れる。
+  const selectedScreenings = screenings.filter(screening => screening.date === selectedDate);// 選択された日付にフィルタリング
 
   /**
-   * 初回表示時にfetchScreeningsを呼んで、stateに入れる
+   * 初回レンダリング
    */
   useEffect(() => {
     const init = async () => {
+      // fetchScreeningsを呼んで、stateに入れる
       const data = await fetchScreenings();
       setScreenings(data);
+
+      // 生dataから日付を取得し昇順にソート&初日を取得後stateに入れる
+      const days = [...new Set (
+        data.map(item => item.date)
+      )].sort();
+      const firstDay = days[0];
+      if (firstDay) {
+        setSelectedDate(firstDay);
+      }
     };
     init();
   }, [])
@@ -27,10 +36,10 @@ function App() {
     <>
       <DateTabs
         dates={dates}
-        // selectedDate={selectedDate}
-        // onSelectDate={setSelectedDate}
+        selectedDate={selectedDate}
+        onSelectDate={setSelectedDate}
       />
-      <Timetable screenings={screenings} />;
+      <Timetable screenings={selectedScreenings} />;
     </>
   )
 }
