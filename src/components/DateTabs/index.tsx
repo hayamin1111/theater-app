@@ -12,8 +12,8 @@ export const DateTabs = ({ dates, selectedDate, onSelectDate }: Props) => {
       <ul className={styles.list}>
         {
           dates.map((date) => (
-            <li key={`${date}`} className={styles.item}>
-              <button onClick={() => onSelectDate(date)} className={styles.button}><span>{date}</span></button>
+            <li key={date} className={styles.item}>
+              <button onClick={() => onSelectDate(date)} className={`${styles.button} ${selectedDate === date ? styles.isActive : ""}`} ><span>{date}</span></button>
             </li>
           ))
         }

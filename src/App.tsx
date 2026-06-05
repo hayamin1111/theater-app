@@ -16,14 +16,15 @@ function App() {
    */
   useEffect(() => {
     const init = async () => {
-      // fetchScreeningsを呼んで、stateに入れる
+      // fetchScreeningsを呼んで、jsonをstateに入れる
       const data = await fetchScreenings();
       setScreenings(data);
 
-      // 生dataから日付を取得し昇順にソート&初日を取得後stateに入れる
+      // 生dataから日付を取得し昇順にソート
       const days = [...new Set (
         data.map(item => item.date)
       )].sort();
+      // 上映初日を取得しstateに入れる
       const firstDay = days[0];
       if (firstDay) {
         setSelectedDate(firstDay);
@@ -39,7 +40,7 @@ function App() {
         selectedDate={selectedDate}
         onSelectDate={setSelectedDate}
       />
-      <Timetable screenings={selectedScreenings} />;
+      <Timetable screenings={selectedScreenings} />
     </>
   )
 }
