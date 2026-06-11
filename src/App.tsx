@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 import { fetchScreenings } from '@/api/screenings';
 import { DateTabs } from '@/components/DateTabs';
+import { SearchMovie } from '@/components/SearchMovie';
 import { Timetable } from '@/components/Timetable';
 import type { Screening } from '@/types/screening';
 import '@/App.css';
 
 function App() {
   const [screenings, setScreenings] = useState<Screening[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string>("");
+  const selectedScreenings = screenings.filter(screening => screening.date === selectedDate);// 日付でフィルタリング
   const dates = [...new Set(screenings.map(screening => screening.date))]; //重複をなくした日付
-  const [selectedDate, setSelectedDate] = useState<string>("");// 生dataから初日の日付を取得し、stateの初期値に入れる。
-  const selectedScreenings = screenings.filter(screening => screening.date === selectedDate);// 選択された日付にフィルタリング
+  const [searchKeyword, setSearchKeyword] = useState<string>(""); 
+  const filteredScreenings = 
+    selectedScreenings.filter(screening => (screening.title.toLowerCase().includes(searchKeyword.toLowerCase()))); //文字列検索でフィルタリング
 
   /**
    * 初回レンダリング
@@ -35,12 +39,18 @@ function App() {
 
   return (
     <>
-      <DateTabs
-        dates={dates}
-        selectedDate={selectedDate}
-        onSelectDate={setSelectedDate}
-      />
-      <Timetable screenings={selectedScreenings} />
+      <div>
+        <DateTabs
+          dates={dates}
+          selectedDate={selectedDate}
+          onSelectDate={setSelectedDate}
+        />
+        <SearchMovie 
+          searchKeyword={searchKeyword}
+          onSearchKeyword={setSearchKeyword}
+        />
+      </div>
+      <Timetable screenings={filteredScreenings} />
     </>
   )
 }
