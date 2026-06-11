@@ -5,6 +5,15 @@ import type {
   Format,
 } from '@/constants/screenings';
 
+export type { SalesStatus, Genre, Format };
+
+// レーティングの型定義
+type Rating =
+  | "G"
+  | "PG12"
+  | "R15+"
+  | "R18+";
+
 // 上映映画1つの型定義
 export type Screening = {
   id: string;
@@ -15,15 +24,8 @@ export type Screening = {
   genre: Genre;
   rating: Rating;
   screen: number;
-  format: Format[];
+  formats: Format[];
   description: string;
   salesStatus: SalesStatus;
   thumbnail: string;
 };
-
-// レーティングの型定義
-type Rating =
-  | "G"
-  | "PG12"
-  | "R15+"
-  | "R18+";

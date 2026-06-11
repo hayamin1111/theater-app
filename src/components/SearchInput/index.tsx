@@ -5,7 +5,7 @@ type Props = {
   onSearchKeyword: (searchKeyword: string) => void;
 };
 
-export const SearchMovie = ({ searchKeyword, onSearchKeyword }: Props) => {
+export const SearchInput = ({ searchKeyword, onSearchKeyword }: Props) => {
   return (
     <>
       <input 
