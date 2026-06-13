@@ -3,6 +3,10 @@
 |---------|--|
 | Node.js | 22.17.0 |
 | React | 19.2.6 |
+| Vite | 8.0.12 |
+| TypeScript | 6.0.2 |
+| TailwindCSS | 19.2.6 |
+| Biome | 2.5.0 |
 
 ## コマンド
 
@@ -16,11 +20,15 @@ npm run dev
 npm run build
 ```
 
-## 使用ライブラリ
-### TypeScript
-| 名前 | 説明                  |
-|---|---------------------|
-|[xxx]| xxxxx|
+### リント
+```bash
+npm run lint
+```
+
+### フォーマット
+```bash
+npm run format
+```
 
 ## ディレクトリ構成
 ```text

@@ -1,802 +1,652 @@
 [
-  {
-    "id": "screening-001",
-    "date": "2026-11-11",
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "title": "銀河寿司の逆襲",
-    "genre": "sf",
-    "rating": "G",
-    "screen": 9,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "宇宙回転寿司の新人が、ネタ切れ危機を宇宙規模で食い止める。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-002",
-    "date": "2026-11-12",
-    "startTime": "12:30",
-    "endTime": "14:00",
-    "title": "名探偵ネコチャンと消えたカリカリ",
-    "genre": "action",
-    "rating": "PG12",
-    "screen": 8,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "高級カリカリ失踪事件を追う猫探偵が、町内の裏路地を歩き回る。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-003",
-    "date": "2026-11-13",
-    "startTime": "10:30",
-    "endTime": "12:00",
-    "title": "社畜戦士タイムカードZ",
-    "genre": "fantasy",
-    "rating": "R15+",
-    "screen": 6,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "定時退社を夢見る会社員が、残業怪人たちと真正面からぶつかる。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-004",
-    "date": "2026-11-11",
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "title": "泣けるゾンビは定時で帰る",
-    "genre": "comedy",
-    "rating": "PG12",
-    "screen": 1,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "人を襲うより先に労務改善を求めるゾンビたちの、妙に切実な一作。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-005",
-    "date": "2026-11-12",
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "title": "プリンセス・オブ・町内会",
-    "genre": "drama",
-    "rating": "R15+",
-    "screen": 10,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "町内会の姫が、夏祭りの予算と空気を同時に回す。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-006",
-    "date": "2026-11-13",
-    "startTime": "13:00",
-    "endTime": "14:30",
-    "title": "忍者カフェ、開店します",
-    "genre": "horror",
-    "rating": "PG12",
-    "screen": 5,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "隠密任務に疲れた忍者たちが、ラテアートで身を立て直す。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-007",
-    "date": "2026-11-11",
-    "startTime": "16:30",
-    "endTime": "18:00",
-    "title": "冷蔵庫の中のラストサムライ",
-    "genre": "action",
-    "rating": "R15+",
-    "screen": 8,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "賞味期限に支配された冷蔵庫王国で、最後の武士ハムが立つ。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-008",
-    "date": "2026-11-12",
-    "startTime": "13:30",
-    "endTime": "16:30",
-    "title": "走れメロンパン",
-    "genre": "fantasy",
-    "rating": "PG12",
-    "screen": 7,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "焼きたての誇りを胸に、メロンパンが閉店間際の街を駆け抜ける。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-009",
-    "date": "2026-11-13",
-    "startTime": "12:30",
-    "endTime": "14:30",
-    "title": "課長島耕作じゃない人",
-    "genre": "romance",
-    "rating": "G",
-    "screen": 3,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "出世街道を少し外れた課長が、紙詰まり一つで会社を救う。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-010",
-    "date": "2026-11-11",
-    "startTime": "13:00",
-    "endTime": "14:00",
-    "title": "となりのトトロっぽい何か",
-    "genre": "drama",
-    "rating": "PG12",
-    "screen": 6,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "森で出会った丸い存在と、著作権を避けつつ友情を育てる。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-011",
-    "date": "2026-11-12",
-    "startTime": "10:00",
-    "endTime": "12:30",
-    "title": "マグロ・イン・ザ・ダーク",
-    "genre": "horror",
-    "rating": "G",
-    "screen": 3,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "深夜の鮮魚売り場で、解凍されたマグロが静かに反撃を始める。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-012",
-    "date": "2026-11-13",
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "title": "恋する自動販売機",
-    "genre": "sf",
-    "rating": "R15+",
-    "screen": 10,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "駅前の自販機が、毎朝ブラックを買う会社員に片想いする。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-013",
-    "date": "2026-11-11",
-    "startTime": "16:30",
-    "endTime": "18:00",
-    "title": "帰ってきた会議室の亡霊",
-    "genre": "fantasy",
-    "rating": "G",
-    "screen": 5,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "終わらない会議に残された亡霊が、議事録修正で復讐する。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-014",
-    "date": "2026-11-12",
-    "startTime": "12:30",
-    "endTime": "15:30",
-    "title": "おにぎりウォーズ 最後の梅干し",
-    "genre": "romance",
-    "rating": "R15+",
-    "screen": 5,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "具材不足の未来で、最後の梅干しをめぐり米粒たちが戦う。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-015",
-    "date": "2026-11-13",
-    "startTime": "16:00",
-    "endTime": "19:00",
-    "title": "秒速5センチメンタル",
-    "genre": "comedy",
-    "rating": "G",
-    "screen": 4,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "移動より未練の処理が遅い二人を描く、少し面倒な恋の話。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-016",
-    "date": "2026-11-11",
-    "startTime": "16:30",
-    "endTime": "19:30",
-    "title": "ドラゴン部長の承認待ち",
-    "genre": "horror",
-    "rating": "R15+",
-    "screen": 10,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "火を吹く部長が稟議を握りつぶす王国で、若手が承認を取りに行く。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-017",
-    "date": "2026-11-12",
-    "startTime": "14:30",
-    "endTime": "17:00",
-    "title": "バック・トゥ・ザ・布団",
-    "genre": "sf",
-    "rating": "G",
-    "screen": 4,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "寝坊をなかったことにするため、青年が布団型タイムマシンで戻る。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-018",
-    "date": "2026-11-13",
-    "startTime": "12:30",
-    "endTime": "15:30",
-    "title": "沈黙のたこ焼き",
-    "genre": "action",
-    "rating": "PG12",
-    "screen": 8,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "屋台を守る寡黙な職人が、ソース利権に群がる悪党を止める。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-019",
-    "date": "2026-11-11",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "title": "君の名は、たぶん佐藤",
-    "genre": "romance",
-    "rating": "G",
-    "screen": 4,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "入れ替わった相手の名前がどうしても出てこない二人の話。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-020",
-    "date": "2026-11-12",
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "title": "シン・残業",
-    "genre": "comedy",
-    "rating": "PG12",
-    "screen": 2,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "突如巨大化した残業が都市を飲み込み、退勤の希望を奪う。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-021",
-    "date": "2026-11-13",
-    "startTime": "16:30",
-    "endTime": "19:30",
-    "title": "ゴッドファーザー、味噌を継ぐ",
-    "genre": "drama",
-    "rating": "R15+",
-    "screen": 1,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "味噌蔵を継いだ三代目が、派手さはないが筋の通る家業を守る。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-022",
-    "date": "2026-11-11",
-    "startTime": "14:30",
-    "endTime": "16:30",
-    "title": "ライオン・キングの会議室",
-    "genre": "sf",
-    "rating": "PG12",
-    "screen": 3,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "会議室の主導権をめぐり、若手と上司が静かに綱引きする。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-023",
-    "date": "2026-11-12",
-    "startTime": "17:00",
-    "endTime": "19:30",
-    "title": "羊たちの眠れない夜勤",
-    "genre": "action",
-    "rating": "R15+",
-    "screen": 3,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "仮眠室で眠れない夜勤スタッフが、送信ミスの山と格闘する。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-024",
-    "date": "2026-11-13",
-    "startTime": "15:00",
-    "endTime": "17:00",
-    "title": "パルプ・フィクションなしで",
-    "genre": "fantasy",
-    "rating": "PG12",
-    "screen": 2,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "盛り過ぎない会話だけで進む、妙にクセのある一日を追う。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-025",
-    "date": "2026-11-11",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "title": "カメラを止めたら終電だった",
-    "genre": "comedy",
-    "rating": "R15+",
-    "screen": 9,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "撮影が止まった瞬間に全員が現実へ戻る、終電ギリギリの現場。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-026",
-    "date": "2026-11-12",
-    "startTime": "16:30",
-    "endTime": "19:30",
-    "title": "インセプションの前に資料読んで",
-    "genre": "drama",
-    "rating": "PG12",
-    "screen": 1,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "夢に入る前に説明資料を読み切る必要がある、段取り重視の任務。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-027",
-    "date": "2026-11-13",
-    "startTime": "15:00",
-    "endTime": "16:00",
-    "title": "ダイ・ハード、でも休憩は取る",
-    "genre": "horror",
-    "rating": "G",
-    "screen": 7,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "不屈の男が、休憩だけはきっちり挟みながら危機を越える。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-028",
-    "date": "2026-11-11",
-    "startTime": "16:30",
-    "endTime": "19:30",
-    "title": "ローマの休日は取れない",
-    "genre": "action",
-    "rating": "PG12",
-    "screen": 2,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "休み申請が通らない王女が、せめて街角だけでも歩き回る。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-029",
-    "date": "2026-11-12",
-    "startTime": "16:00",
-    "endTime": "19:00",
-    "title": "ショーシャンクの空席",
-    "genre": "fantasy",
-    "rating": "G",
-    "screen": 9,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "埋まらない座席を巡って、人の移動と諦めの悪さが交差する。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-030",
-    "date": "2026-11-13",
-    "startTime": "19:30",
-    "endTime": "20:30",
-    "title": "風と共に遅刻",
-    "genre": "romance",
-    "rating": "R15+",
-    "screen": 5,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "待ち合わせに全部遅れた二人が、ようやく向かい風を受け止める。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-031",
-    "date": "2026-11-11",
-    "startTime": "20:00",
-    "endTime": "23:00",
-    "title": "マトリックスは出社を選ぶ",
-    "genre": "drama",
-    "rating": "G",
-    "screen": 6,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "仮想世界より出社を選んだ男が、会議の整合性を見つけ直す。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-032",
-    "date": "2026-11-12",
-    "startTime": "17:30",
-    "endTime": "20:30",
-    "title": "エイリアン、営業に来る",
-    "genre": "horror",
-    "rating": "R15+",
-    "screen": 8,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "異星から来た訪問者が、なぜか最初に提案書を置いていく。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-033",
-    "date": "2026-11-13",
-    "startTime": "16:00",
-    "endTime": "18:30",
-    "title": "ジュラシック・パークの植木係",
-    "genre": "sf",
-    "rating": "G",
-    "screen": 9,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "恐竜より先に庭木が暴れる園で、植木係が静かに現場を回す。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-034",
-    "date": "2026-11-11",
-    "startTime": "17:00",
-    "endTime": "18:30",
-    "title": "ターミネーター、家電量販店へ",
-    "genre": "fantasy",
-    "rating": "R15+",
-    "screen": 7,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "未来から来た機械が、最終的にエアコン売り場へ流れ着く。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-035",
-    "date": "2026-11-12",
-    "startTime": "19:30",
-    "endTime": "22:30",
-    "title": "E.T.、たぶん着信拒否",
-    "genre": "romance",
-    "rating": "G",
-    "screen": 5,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "帰る方法がわからない宇宙人が、なぜか連絡先だけ増えていく。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-036",
-    "date": "2026-11-13",
-    "startTime": "16:30",
-    "endTime": "17:30",
-    "title": "オーシャンズ11の経費精算",
-    "genre": "comedy",
-    "rating": "PG12",
-    "screen": 6,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "華麗な計画の後に残るのは、細かすぎる経費の山だった。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-037",
-    "date": "2026-11-11",
-    "startTime": "20:30",
-    "endTime": "21:30",
-    "title": "ハリー・ポッターと小テストの秘密",
-    "genre": "horror",
-    "rating": "G",
-    "screen": 8,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "魔法学校の本題が、古代呪文より小テスト対策だと気づく話。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-038",
-    "date": "2026-11-12",
-    "startTime": "16:30",
-    "endTime": "19:30",
-    "title": "千と千尋の残業隠し",
-    "genre": "sf",
-    "rating": "PG12",
-    "screen": 6,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "見えない残業の海で、ひたすら名前を呼ばれ続ける働き手の話。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-039",
-    "date": "2026-11-13",
-    "startTime": "17:30",
-    "endTime": "18:30",
-    "title": "アバター、青くなる前に",
-    "genre": "action",
-    "rating": "R15+",
-    "screen": 3,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "青くなる前に交渉しろと言われた交渉役が、色より先に空気を読む。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-040",
-    "date": "2026-11-11",
-    "startTime": "20:30",
-    "endTime": "23:00",
-    "title": "ジョーズ、海鮮丼を狙う",
-    "genre": "romance",
-    "rating": "PG12",
-    "screen": 5,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "海に出るたび誰かの昼飯が危ない、妙に身近なサメ映画。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-041",
-    "date": "2026-11-12",
-    "startTime": "20:00",
-    "endTime": "23:00",
-    "title": "グレムリン、深夜の冷蔵庫",
-    "genre": "comedy",
-    "rating": "R15+",
-    "screen": 10,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "深夜の冷蔵庫に入れたものが、翌朝だいたい増えている。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-042",
-    "date": "2026-11-13",
-    "startTime": "20:00",
-    "endTime": "23:00",
-    "title": "ロッキー、階段は使わない",
-    "genre": "drama",
-    "rating": "PG12",
-    "screen": 10,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "体力はあるが階段だけは勘弁したい男の、横着な特訓記録。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-043",
-    "date": "2026-11-11",
-    "startTime": "20:00",
-    "endTime": "22:30",
-    "title": "ブレードランナー、終電を追う",
-    "genre": "sf",
-    "rating": "R15+",
-    "screen": 3,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "終電を追ううちに、誰が人間かより誰が乗れたかが焦点になる。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-044",
-    "date": "2026-11-12",
-    "startTime": "20:00",
-    "endTime": "23:00",
-    "title": "ゴーストバスターズ、請求書を追う",
-    "genre": "action",
-    "rating": "PG12",
-    "screen": 2,
-    "formats": [
-      "dubbed",
-      "3D"
-    ],
-    "description": "幽霊退治より請求書回収のほうが難しい、実務寄りの一作。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-045",
-    "date": "2026-11-13",
-    "startTime": "21:00",
-    "endTime": "22:00",
-    "title": "ノッティングヒルの角部屋",
-    "genre": "fantasy",
-    "rating": "G",
-    "screen": 2,
-    "formats": [
-      "subtitled",
-      "3D"
-    ],
-    "description": "静かな角部屋で、距離の近い恋と生活音がゆっくり混ざる。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-046",
-    "date": "2026-11-11",
-    "startTime": "19:00",
-    "endTime": "22:00",
-    "title": "ラ・ラ・ランド、会議中",
-    "genre": "comedy",
-    "rating": "PG12",
-    "screen": 1,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "歌い出したい気持ちを抑え、会議を一つずつ片づける恋人たち。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-047",
-    "date": "2026-11-12",
-    "startTime": "21:00",
-    "endTime": "22:30",
-    "title": "ファイト・クラブ、筋トレ部",
-    "genre": "drama",
-    "rating": "G",
-    "screen": 4,
-    "formats": [
-      "subtitled",
-      "4k"
-    ],
-    "description": "殴り合いより前に、まずは会費とフォームを整える部活映画。",
-    "salesStatus": "few-left"
-  },
-  {
-    "id": "screening-048",
-    "date": "2026-11-13",
-    "startTime": "19:00",
-    "endTime": "20:00",
-    "title": "プラダを着た経理部",
-    "genre": "horror",
-    "rating": "R15+",
-    "screen": 8,
-    "formats": [
-      "dubbed",
-      "4k"
-    ],
-    "description": "数字に強い人ほど、服より締切に厳しいことを描く。",
-    "salesStatus": "available"
-  },
-  {
-    "id": "screening-049",
-    "date": "2026-11-11",
-    "startTime": "22:00",
-    "endTime": "23:00",
-    "title": "ユー・ガット・メール、でも未読",
-    "genre": "action",
-    "rating": "G",
-    "screen": 10,
-    "formats": [
-      "subtitled",
-      "imax"
-    ],
-    "description": "届いているのに開かれない通知が、やたら重く見える。",
-    "salesStatus": "sold-out"
-  },
-  {
-    "id": "screening-050",
-    "date": "2026-11-12",
-    "startTime": "20:00",
-    "endTime": "23:00",
-    "title": "バベルの塔より長い議事録",
-    "genre": "fantasy",
-    "rating": "R15+",
-    "screen": 7,
-    "formats": [
-      "dubbed",
-      "imax"
-    ],
-    "description": "積み上がる会議の記録が、いつの間にか塔みたいに高くなる。",
-    "salesStatus": "available"
-  }
+	{
+		"id": "screening-001",
+		"date": "2026-11-11",
+		"startTime": "13:00",
+		"endTime": "16:00",
+		"title": "銀河寿司の逆襲",
+		"genre": "sf",
+		"rating": "G",
+		"screen": 9,
+		"formats": ["subtitled", "4k"],
+		"description": "宇宙回転寿司の新人が、ネタ切れ危機を宇宙規模で食い止める。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-002",
+		"date": "2026-11-12",
+		"startTime": "12:30",
+		"endTime": "14:00",
+		"title": "名探偵ネコチャンと消えたカリカリ",
+		"genre": "action",
+		"rating": "PG12",
+		"screen": 8,
+		"formats": ["dubbed", "4k"],
+		"description": "高級カリカリ失踪事件を追う猫探偵が、町内の裏路地を歩き回る。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-003",
+		"date": "2026-11-13",
+		"startTime": "10:30",
+		"endTime": "12:00",
+		"title": "社畜戦士タイムカードZ",
+		"genre": "fantasy",
+		"rating": "R15+",
+		"screen": 6,
+		"formats": ["subtitled", "4k"],
+		"description": "定時退社を夢見る会社員が、残業怪人たちと真正面からぶつかる。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-004",
+		"date": "2026-11-11",
+		"startTime": "13:00",
+		"endTime": "16:00",
+		"title": "泣けるゾンビは定時で帰る",
+		"genre": "comedy",
+		"rating": "PG12",
+		"screen": 1,
+		"formats": ["dubbed", "imax"],
+		"description": "人を襲うより先に労務改善を求めるゾンビたちの、妙に切実な一作。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-005",
+		"date": "2026-11-12",
+		"startTime": "13:00",
+		"endTime": "16:00",
+		"title": "プリンセス・オブ・町内会",
+		"genre": "drama",
+		"rating": "R15+",
+		"screen": 10,
+		"formats": ["subtitled", "imax"],
+		"description": "町内会の姫が、夏祭りの予算と空気を同時に回す。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-006",
+		"date": "2026-11-13",
+		"startTime": "13:00",
+		"endTime": "14:30",
+		"title": "忍者カフェ、開店します",
+		"genre": "horror",
+		"rating": "PG12",
+		"screen": 5,
+		"formats": ["dubbed", "imax"],
+		"description": "隠密任務に疲れた忍者たちが、ラテアートで身を立て直す。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-007",
+		"date": "2026-11-11",
+		"startTime": "16:30",
+		"endTime": "18:00",
+		"title": "冷蔵庫の中のラストサムライ",
+		"genre": "action",
+		"rating": "R15+",
+		"screen": 8,
+		"formats": ["subtitled", "3D"],
+		"description": "賞味期限に支配された冷蔵庫王国で、最後の武士ハムが立つ。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-008",
+		"date": "2026-11-12",
+		"startTime": "13:30",
+		"endTime": "16:30",
+		"title": "走れメロンパン",
+		"genre": "fantasy",
+		"rating": "PG12",
+		"screen": 7,
+		"formats": ["dubbed", "3D"],
+		"description": "焼きたての誇りを胸に、メロンパンが閉店間際の街を駆け抜ける。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-009",
+		"date": "2026-11-13",
+		"startTime": "12:30",
+		"endTime": "14:30",
+		"title": "課長島耕作じゃない人",
+		"genre": "romance",
+		"rating": "G",
+		"screen": 3,
+		"formats": ["subtitled", "3D"],
+		"description": "出世街道を少し外れた課長が、紙詰まり一つで会社を救う。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-010",
+		"date": "2026-11-11",
+		"startTime": "13:00",
+		"endTime": "14:00",
+		"title": "となりのトトロっぽい何か",
+		"genre": "drama",
+		"rating": "PG12",
+		"screen": 6,
+		"formats": ["dubbed", "4k"],
+		"description": "森で出会った丸い存在と、著作権を避けつつ友情を育てる。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-011",
+		"date": "2026-11-12",
+		"startTime": "10:00",
+		"endTime": "12:30",
+		"title": "マグロ・イン・ザ・ダーク",
+		"genre": "horror",
+		"rating": "G",
+		"screen": 3,
+		"formats": ["subtitled", "4k"],
+		"description": "深夜の鮮魚売り場で、解凍されたマグロが静かに反撃を始める。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-012",
+		"date": "2026-11-13",
+		"startTime": "13:00",
+		"endTime": "16:00",
+		"title": "恋する自動販売機",
+		"genre": "sf",
+		"rating": "R15+",
+		"screen": 10,
+		"formats": ["dubbed", "4k"],
+		"description": "駅前の自販機が、毎朝ブラックを買う会社員に片想いする。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-013",
+		"date": "2026-11-11",
+		"startTime": "16:30",
+		"endTime": "18:00",
+		"title": "帰ってきた会議室の亡霊",
+		"genre": "fantasy",
+		"rating": "G",
+		"screen": 5,
+		"formats": ["subtitled", "imax"],
+		"description": "終わらない会議に残された亡霊が、議事録修正で復讐する。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-014",
+		"date": "2026-11-12",
+		"startTime": "12:30",
+		"endTime": "15:30",
+		"title": "おにぎりウォーズ 最後の梅干し",
+		"genre": "romance",
+		"rating": "R15+",
+		"screen": 5,
+		"formats": ["dubbed", "imax"],
+		"description": "具材不足の未来で、最後の梅干しをめぐり米粒たちが戦う。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-015",
+		"date": "2026-11-13",
+		"startTime": "16:00",
+		"endTime": "19:00",
+		"title": "秒速5センチメンタル",
+		"genre": "comedy",
+		"rating": "G",
+		"screen": 4,
+		"formats": ["subtitled", "imax"],
+		"description": "移動より未練の処理が遅い二人を描く、少し面倒な恋の話。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-016",
+		"date": "2026-11-11",
+		"startTime": "16:30",
+		"endTime": "19:30",
+		"title": "ドラゴン部長の承認待ち",
+		"genre": "horror",
+		"rating": "R15+",
+		"screen": 10,
+		"formats": ["dubbed", "3D"],
+		"description": "火を吹く部長が稟議を握りつぶす王国で、若手が承認を取りに行く。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-017",
+		"date": "2026-11-12",
+		"startTime": "14:30",
+		"endTime": "17:00",
+		"title": "バック・トゥ・ザ・布団",
+		"genre": "sf",
+		"rating": "G",
+		"screen": 4,
+		"formats": ["subtitled", "3D"],
+		"description": "寝坊をなかったことにするため、青年が布団型タイムマシンで戻る。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-018",
+		"date": "2026-11-13",
+		"startTime": "12:30",
+		"endTime": "15:30",
+		"title": "沈黙のたこ焼き",
+		"genre": "action",
+		"rating": "PG12",
+		"screen": 8,
+		"formats": ["dubbed", "3D"],
+		"description": "屋台を守る寡黙な職人が、ソース利権に群がる悪党を止める。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-019",
+		"date": "2026-11-11",
+		"startTime": "18:30",
+		"endTime": "20:00",
+		"title": "君の名は、たぶん佐藤",
+		"genre": "romance",
+		"rating": "G",
+		"screen": 4,
+		"formats": ["subtitled", "4k"],
+		"description": "入れ替わった相手の名前がどうしても出てこない二人の話。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-020",
+		"date": "2026-11-12",
+		"startTime": "13:00",
+		"endTime": "16:00",
+		"title": "シン・残業",
+		"genre": "comedy",
+		"rating": "PG12",
+		"screen": 2,
+		"formats": ["dubbed", "4k"],
+		"description": "突如巨大化した残業が都市を飲み込み、退勤の希望を奪う。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-021",
+		"date": "2026-11-13",
+		"startTime": "16:30",
+		"endTime": "19:30",
+		"title": "ゴッドファーザー、味噌を継ぐ",
+		"genre": "drama",
+		"rating": "R15+",
+		"screen": 1,
+		"formats": ["subtitled", "4k"],
+		"description": "味噌蔵を継いだ三代目が、派手さはないが筋の通る家業を守る。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-022",
+		"date": "2026-11-11",
+		"startTime": "14:30",
+		"endTime": "16:30",
+		"title": "ライオン・キングの会議室",
+		"genre": "sf",
+		"rating": "PG12",
+		"screen": 3,
+		"formats": ["dubbed", "imax"],
+		"description": "会議室の主導権をめぐり、若手と上司が静かに綱引きする。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-023",
+		"date": "2026-11-12",
+		"startTime": "17:00",
+		"endTime": "19:30",
+		"title": "羊たちの眠れない夜勤",
+		"genre": "action",
+		"rating": "R15+",
+		"screen": 3,
+		"formats": ["subtitled", "imax"],
+		"description": "仮眠室で眠れない夜勤スタッフが、送信ミスの山と格闘する。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-024",
+		"date": "2026-11-13",
+		"startTime": "15:00",
+		"endTime": "17:00",
+		"title": "パルプ・フィクションなしで",
+		"genre": "fantasy",
+		"rating": "PG12",
+		"screen": 2,
+		"formats": ["dubbed", "imax"],
+		"description": "盛り過ぎない会話だけで進む、妙にクセのある一日を追う。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-025",
+		"date": "2026-11-11",
+		"startTime": "18:30",
+		"endTime": "20:00",
+		"title": "カメラを止めたら終電だった",
+		"genre": "comedy",
+		"rating": "R15+",
+		"screen": 9,
+		"formats": ["subtitled", "3D"],
+		"description": "撮影が止まった瞬間に全員が現実へ戻る、終電ギリギリの現場。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-026",
+		"date": "2026-11-12",
+		"startTime": "16:30",
+		"endTime": "19:30",
+		"title": "インセプションの前に資料読んで",
+		"genre": "drama",
+		"rating": "PG12",
+		"screen": 1,
+		"formats": ["dubbed", "3D"],
+		"description": "夢に入る前に説明資料を読み切る必要がある、段取り重視の任務。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-027",
+		"date": "2026-11-13",
+		"startTime": "15:00",
+		"endTime": "16:00",
+		"title": "ダイ・ハード、でも休憩は取る",
+		"genre": "horror",
+		"rating": "G",
+		"screen": 7,
+		"formats": ["subtitled", "3D"],
+		"description": "不屈の男が、休憩だけはきっちり挟みながら危機を越える。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-028",
+		"date": "2026-11-11",
+		"startTime": "16:30",
+		"endTime": "19:30",
+		"title": "ローマの休日は取れない",
+		"genre": "action",
+		"rating": "PG12",
+		"screen": 2,
+		"formats": ["dubbed", "4k"],
+		"description": "休み申請が通らない王女が、せめて街角だけでも歩き回る。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-029",
+		"date": "2026-11-12",
+		"startTime": "16:00",
+		"endTime": "19:00",
+		"title": "ショーシャンクの空席",
+		"genre": "fantasy",
+		"rating": "G",
+		"screen": 9,
+		"formats": ["subtitled", "4k"],
+		"description": "埋まらない座席を巡って、人の移動と諦めの悪さが交差する。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-030",
+		"date": "2026-11-13",
+		"startTime": "19:30",
+		"endTime": "20:30",
+		"title": "風と共に遅刻",
+		"genre": "romance",
+		"rating": "R15+",
+		"screen": 5,
+		"formats": ["dubbed", "4k"],
+		"description": "待ち合わせに全部遅れた二人が、ようやく向かい風を受け止める。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-031",
+		"date": "2026-11-11",
+		"startTime": "20:00",
+		"endTime": "23:00",
+		"title": "マトリックスは出社を選ぶ",
+		"genre": "drama",
+		"rating": "G",
+		"screen": 6,
+		"formats": ["subtitled", "imax"],
+		"description": "仮想世界より出社を選んだ男が、会議の整合性を見つけ直す。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-032",
+		"date": "2026-11-12",
+		"startTime": "17:30",
+		"endTime": "20:30",
+		"title": "エイリアン、営業に来る",
+		"genre": "horror",
+		"rating": "R15+",
+		"screen": 8,
+		"formats": ["dubbed", "imax"],
+		"description": "異星から来た訪問者が、なぜか最初に提案書を置いていく。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-033",
+		"date": "2026-11-13",
+		"startTime": "16:00",
+		"endTime": "18:30",
+		"title": "ジュラシック・パークの植木係",
+		"genre": "sf",
+		"rating": "G",
+		"screen": 9,
+		"formats": ["subtitled", "imax"],
+		"description": "恐竜より先に庭木が暴れる園で、植木係が静かに現場を回す。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-034",
+		"date": "2026-11-11",
+		"startTime": "17:00",
+		"endTime": "18:30",
+		"title": "ターミネーター、家電量販店へ",
+		"genre": "fantasy",
+		"rating": "R15+",
+		"screen": 7,
+		"formats": ["dubbed", "3D"],
+		"description": "未来から来た機械が、最終的にエアコン売り場へ流れ着く。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-035",
+		"date": "2026-11-12",
+		"startTime": "19:30",
+		"endTime": "22:30",
+		"title": "E.T.、たぶん着信拒否",
+		"genre": "romance",
+		"rating": "G",
+		"screen": 5,
+		"formats": ["subtitled", "3D"],
+		"description": "帰る方法がわからない宇宙人が、なぜか連絡先だけ増えていく。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-036",
+		"date": "2026-11-13",
+		"startTime": "16:30",
+		"endTime": "17:30",
+		"title": "オーシャンズ11の経費精算",
+		"genre": "comedy",
+		"rating": "PG12",
+		"screen": 6,
+		"formats": ["dubbed", "3D"],
+		"description": "華麗な計画の後に残るのは、細かすぎる経費の山だった。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-037",
+		"date": "2026-11-11",
+		"startTime": "20:30",
+		"endTime": "21:30",
+		"title": "ハリー・ポッターと小テストの秘密",
+		"genre": "horror",
+		"rating": "G",
+		"screen": 8,
+		"formats": ["subtitled", "4k"],
+		"description": "魔法学校の本題が、古代呪文より小テスト対策だと気づく話。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-038",
+		"date": "2026-11-12",
+		"startTime": "16:30",
+		"endTime": "19:30",
+		"title": "千と千尋の残業隠し",
+		"genre": "sf",
+		"rating": "PG12",
+		"screen": 6,
+		"formats": ["dubbed", "4k"],
+		"description": "見えない残業の海で、ひたすら名前を呼ばれ続ける働き手の話。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-039",
+		"date": "2026-11-13",
+		"startTime": "17:30",
+		"endTime": "18:30",
+		"title": "アバター、青くなる前に",
+		"genre": "action",
+		"rating": "R15+",
+		"screen": 3,
+		"formats": ["subtitled", "4k"],
+		"description": "青くなる前に交渉しろと言われた交渉役が、色より先に空気を読む。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-040",
+		"date": "2026-11-11",
+		"startTime": "20:30",
+		"endTime": "23:00",
+		"title": "ジョーズ、海鮮丼を狙う",
+		"genre": "romance",
+		"rating": "PG12",
+		"screen": 5,
+		"formats": ["dubbed", "imax"],
+		"description": "海に出るたび誰かの昼飯が危ない、妙に身近なサメ映画。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-041",
+		"date": "2026-11-12",
+		"startTime": "20:00",
+		"endTime": "23:00",
+		"title": "グレムリン、深夜の冷蔵庫",
+		"genre": "comedy",
+		"rating": "R15+",
+		"screen": 10,
+		"formats": ["subtitled", "imax"],
+		"description": "深夜の冷蔵庫に入れたものが、翌朝だいたい増えている。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-042",
+		"date": "2026-11-13",
+		"startTime": "20:00",
+		"endTime": "23:00",
+		"title": "ロッキー、階段は使わない",
+		"genre": "drama",
+		"rating": "PG12",
+		"screen": 10,
+		"formats": ["dubbed", "imax"],
+		"description": "体力はあるが階段だけは勘弁したい男の、横着な特訓記録。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-043",
+		"date": "2026-11-11",
+		"startTime": "20:00",
+		"endTime": "22:30",
+		"title": "ブレードランナー、終電を追う",
+		"genre": "sf",
+		"rating": "R15+",
+		"screen": 3,
+		"formats": ["subtitled", "3D"],
+		"description": "終電を追ううちに、誰が人間かより誰が乗れたかが焦点になる。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-044",
+		"date": "2026-11-12",
+		"startTime": "20:00",
+		"endTime": "23:00",
+		"title": "ゴーストバスターズ、請求書を追う",
+		"genre": "action",
+		"rating": "PG12",
+		"screen": 2,
+		"formats": ["dubbed", "3D"],
+		"description": "幽霊退治より請求書回収のほうが難しい、実務寄りの一作。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-045",
+		"date": "2026-11-13",
+		"startTime": "21:00",
+		"endTime": "22:00",
+		"title": "ノッティングヒルの角部屋",
+		"genre": "fantasy",
+		"rating": "G",
+		"screen": 2,
+		"formats": ["subtitled", "3D"],
+		"description": "静かな角部屋で、距離の近い恋と生活音がゆっくり混ざる。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-046",
+		"date": "2026-11-11",
+		"startTime": "19:00",
+		"endTime": "22:00",
+		"title": "ラ・ラ・ランド、会議中",
+		"genre": "comedy",
+		"rating": "PG12",
+		"screen": 1,
+		"formats": ["dubbed", "4k"],
+		"description": "歌い出したい気持ちを抑え、会議を一つずつ片づける恋人たち。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-047",
+		"date": "2026-11-12",
+		"startTime": "21:00",
+		"endTime": "22:30",
+		"title": "ファイト・クラブ、筋トレ部",
+		"genre": "drama",
+		"rating": "G",
+		"screen": 4,
+		"formats": ["subtitled", "4k"],
+		"description": "殴り合いより前に、まずは会費とフォームを整える部活映画。",
+		"salesStatus": "few-left"
+	},
+	{
+		"id": "screening-048",
+		"date": "2026-11-13",
+		"startTime": "19:00",
+		"endTime": "20:00",
+		"title": "プラダを着た経理部",
+		"genre": "horror",
+		"rating": "R15+",
+		"screen": 8,
+		"formats": ["dubbed", "4k"],
+		"description": "数字に強い人ほど、服より締切に厳しいことを描く。",
+		"salesStatus": "available"
+	},
+	{
+		"id": "screening-049",
+		"date": "2026-11-11",
+		"startTime": "22:00",
+		"endTime": "23:00",
+		"title": "ユー・ガット・メール、でも未読",
+		"genre": "action",
+		"rating": "G",
+		"screen": 10,
+		"formats": ["subtitled", "imax"],
+		"description": "届いているのに開かれない通知が、やたら重く見える。",
+		"salesStatus": "sold-out"
+	},
+	{
+		"id": "screening-050",
+		"date": "2026-11-12",
+		"startTime": "20:00",
+		"endTime": "23:00",
+		"title": "バベルの塔より長い議事録",
+		"genre": "fantasy",
+		"rating": "R15+",
+		"screen": 7,
+		"formats": ["dubbed", "imax"],
+		"description": "積み上がる会議の記録が、いつの間にか塔みたいに高くなる。",
+		"salesStatus": "available"
+	}
 ]
