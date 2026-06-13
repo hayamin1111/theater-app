@@ -1,7 +1,8 @@
 .timetable {
   display: grid;
-  grid-template-columns: 80px repeat(4, 1fr);
+  grid-template-columns: 80px repeat(10, minmax(120px, 1fr));
   grid-auto-rows: 48px;
+  align-items: start;
   position: relative;
 }
 
@@ -9,7 +10,7 @@
   grid-column: 1;
 }
 
-.screening-cell {
+.screeningCell {
   padding: 8px;
   border: 1px solid #ccc;
   overflow: hidden;
