@@ -4,6 +4,7 @@ import styles from './index.module.css';
 
 type Props = {
   screenings: Screening[];
+  onSelectedScreening: (screening: Screening) => void;
 };
 
 const SLOT_MINUTES = 30; //1セルの単位（分）
@@ -24,7 +25,7 @@ const timeToRow = (time: string) => {
   return Math.floor((totalMinutes - startMinutes) / SLOT_MINUTES) + 1; // CSSGridでスタイリングするため+1とする
 };
 
-export const Timetable = ({ screenings }: Props) => {
+export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
   return (
     <div className={styles.timetable}>
       {screenings.map((screening) => {
@@ -33,13 +34,15 @@ export const Timetable = ({ screenings }: Props) => {
         const column = screening.screen + 1; //1列目は上映時間が入るため+1とする
 
         return (
-          <article
+          <button
             key={screening.id}
+            type="button"
             className="screeningCell"
             style={{
               gridColumn: column,
               gridRow: `${rowStart} / ${rowEnd}`,
             }}
+            onClick={() => onSelectedScreening(screening)}
           >
             <p>{screening.startTime} - {screening.endTime}</p>
             <h3>{screening.title}</h3>
@@ -51,7 +54,7 @@ export const Timetable = ({ screenings }: Props) => {
                 .join(" / ")
               }
             </p>
-          </article>
+          </button>
         );
       })}
     </div>

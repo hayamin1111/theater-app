@@ -5,11 +5,13 @@ import { SearchInput } from '@/components/SearchInput';
 import { GenresFilterCheckboxes } from '@/components/GenresFilterCheckboxes';
 import { FormatsFilterCheckboxes } from '@/components/FormatsFilterCheckboxes';
 import { Timetable } from '@/components/Timetable';
+import { MovieDetailModal } from '@/components/MovieDetailModal';
 import type { Screening, Genre, Format } from '@/types/screening';
 import '@/App.css';
 
 function App() {
   const [screenings, setScreenings] = useState<Screening[]>([]);
+  const [selectedScreening, setSelectedScreening] = useState<Screening | null>(null);
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [searchKeyword, setSearchKeyword] = useState<string>(""); 
   const [selectedGenres, setSelectedGenres] = useState<Genre[]>([]);
@@ -73,7 +75,14 @@ function App() {
       </div>
       <Timetable 
         screenings={filteredScreenings} 
+        onSelectedScreening={setSelectedScreening} //クリックしたセルの上映情報がstateに入る
       />
+      {selectedScreening && (
+        <MovieDetailModal
+          screening={selectedScreening} //Timetableでクリックした上映情報を渡す
+          onClose={() => setSelectedScreening(null)}
+        />
+      )}
     </>
   )
 }
