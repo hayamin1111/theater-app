@@ -1,5 +1,5 @@
 import type { Screening } from '@/types/screening';
-import { GENRES, SALES_STATUS } from '@/constants/screenings';
+import { GENRES, SALES_STATUS, FORMATS } from '@/constants/screenings';
 import styles from './index.module.css';
 
 type Props = {
@@ -35,7 +35,7 @@ export const Timetable = ({ screenings }: Props) => {
         return (
           <article
             key={screening.id}
-            className="screening-cell"
+            className="screeningCell"
             style={{
               gridColumn: column,
               gridRow: `${rowStart} / ${rowEnd}`,
@@ -45,6 +45,12 @@ export const Timetable = ({ screenings }: Props) => {
             <h3>{screening.title}</h3>
             <p>{SALES_STATUS[screening.salesStatus]}</p>
             <p>{GENRES[screening.genre]}</p>
+            <p>
+              {screening.formats
+                .map(format => FORMATS[format])
+                .join(" / ")
+              }
+            </p>
           </article>
         );
       })}

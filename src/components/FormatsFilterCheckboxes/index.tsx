@@ -1,10 +1,11 @@
 import styles from './index.module.css';
-import type { Formats } from '@/types/screening';
+import type { Format } from '@/types/screening';
+import { FORMATS } from '@/constants/screenings';
 
 type Props = {
-  formats: Formats[];
-  selectedFormats: Formats[];
-  onSelectedFormats: (formats: Formats[]) => void;
+  formats: Format[];
+  selectedFormats: Format[];
+  onSelectedFormats: (formats: Format[]) => void;
 };
 
 export const FormatsFilterCheckboxes = ({ formats, selectedFormats, onSelectedFormats }: Props) => {
@@ -12,15 +13,16 @@ export const FormatsFilterCheckboxes = ({ formats, selectedFormats, onSelectedFo
   /**
    * チェックボックスの値を保持する
    */
-  const handleSelectedGenre = (e:React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value as Formats;
+  const handleSelectedFormat = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value as Format;
 
-    // checkされたら
     if(e.target.checked) {
+      // checkされたら、check済みの中にvalueがなければ配列に追加
       if (!selectedFormats.includes(value)) {
         onSelectedFormats([...selectedFormats, value]);
       }
     } else {
+      // checkが外れたら、配列からvalueは削除
       onSelectedFormats(selectedFormats.filter(format => format !== value));
     }
   }
@@ -35,13 +37,12 @@ export const FormatsFilterCheckboxes = ({ formats, selectedFormats, onSelectedFo
             name="format"
             value={format}
             checked={selectedFormats.includes(format)}
-            onChange={(e) => handleSelectedGenre(e)}
+            onChange={handleSelectedFormat}
           />
-            {format}
+            {FORMATS[format]}
           </label>
         ))
       }
-      <p>{selectedFormats}</p>
     </>
   );
 };

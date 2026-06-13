@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { fetchScreenings } from '@/api/screenings';
 import { DateTabs } from '@/components/DateTabs';
 import { SearchInput } from '@/components/SearchInput';
-import { FilterCheckboxes } from '@/components/FilterCheckboxes';
+import { GenresFilterCheckboxes } from '@/components/GenresFilterCheckboxes';
 import { FormatsFilterCheckboxes } from '@/components/FormatsFilterCheckboxes';
 import { Timetable } from '@/components/Timetable';
-import type { Screening, Genre, Formats } from '@/types/screening';
+import type { Screening, Genre, Format } from '@/types/screening';
 import '@/App.css';
 
 function App() {
@@ -13,20 +13,18 @@ function App() {
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [searchKeyword, setSearchKeyword] = useState<string>(""); 
   const [selectedGenres, setSelectedGenres] = useState<Genre[]>([]);
-  const [selectedFormats, setSelectedFormats] = useState<Formats[]>([]);
+  const [selectedFormats, setSelectedFormats] = useState<Format[]>([]);
 
   const dates = [...new Set(screenings.map(screening => screening.date))]; //重複をなくした日付
   const genres = [...new Set(screenings.map(screening => screening.genre))]; //重複をなくしたジャンル
   const formats = [...new Set(screenings.flatMap(screening => screening.formats))]; //重複をなくした上映形式
-
 
   // フィルタリング
   const filteredScreenings = screenings
     .filter(screening => screening.date === selectedDate)// 日付
     .filter(screening => screening.title.toLowerCase().includes(searchKeyword.toLowerCase())) //文字列検索
     .filter(screening => selectedGenres.length === 0 || selectedGenres.includes(screening.genre))  // ジャンル（or検索）。選択なしで全件表示。
-    .filter(screenings => selectedFormats.length === 0 || selectedFormats.some(format => screenings.formats.includes(format))); // 上映形式（or検索）。複数選択可。選択なしで全件表示。
-  
+    .filter(screening => selectedFormats.length === 0 || selectedFormats.some(format => screening.formats.includes(format))); // 上映形式（or検索）。複数選択可。選択なしで全件表示。
 
   /**
    * 初回レンダリング
@@ -62,7 +60,7 @@ function App() {
           searchKeyword={searchKeyword}
           onSearchKeyword={setSearchKeyword}
         />
-        <FilterCheckboxes
+        <GenresFilterCheckboxes
           genres={genres}
           selectedGenres={selectedGenres}
           onSelectedGenres={setSelectedGenres}

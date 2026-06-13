@@ -1,5 +1,6 @@
 import styles from './index.module.css';
 import type { Genre } from '@/types/screening';
+import { GENRES } from '@/constants/screenings';
 
 type Props = {
   genres: Genre[];
@@ -7,7 +8,7 @@ type Props = {
   onSelectedGenres: (genres: Genre[]) => void;
 };
 
-export const FilterCheckboxes = ({ genres, selectedGenres, onSelectedGenres }: Props) => {
+export const GenresFilterCheckboxes = ({ genres, selectedGenres, onSelectedGenres }: Props) => {
   
   /**
    * チェックボックスの値を保持する
@@ -15,12 +16,13 @@ export const FilterCheckboxes = ({ genres, selectedGenres, onSelectedGenres }: P
   const handleSelectedGenre = (e:React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value as Genre;
 
-    // checkされたら
     if(e.target.checked) {
+      // checkされたら、check済みの中にvalueがなければ配列に追加
       if (!selectedGenres.includes(value)) {
         onSelectedGenres([...selectedGenres, value]);
       }
     } else {
+      // checkが外れたら、配列からvalueは削除
       onSelectedGenres(selectedGenres.filter(genre => genre !== value));
     }
   }
@@ -35,13 +37,12 @@ export const FilterCheckboxes = ({ genres, selectedGenres, onSelectedGenres }: P
             name="genre"
             value={genre}
             checked={selectedGenres.includes(genre)}
-            onChange={(e) => handleSelectedGenre(e)}
+            onChange={handleSelectedGenre}
           />
-            {genre}
+            {GENRES[genre]}
           </label>
         ))
       }
-      <p>{selectedGenres}</p>
     </>
   );
 };

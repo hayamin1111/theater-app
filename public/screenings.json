@@ -8,7 +8,7 @@
     "genre": "sf",
     "rating": "G",
     "screen": 1,
-    "format": ["subtitled", "4k"],
+    "formats": ["subtitled", "4k"],
     "description": "宇宙回転寿司チェーンの新人職人が、銀河を巻き込むネタ切れ危機に立ち向かうSFコメディ。",
     "salesStatus": "available"
   },
@@ -21,7 +21,7 @@
     "genre": "comedy",
     "rating": "G",
     "screen": 2,
-    "format": ["dubbed", "2D"],
+    "formats": ["dubbed", "imax"],
     "description": "高級カリカリ失踪事件を追う猫探偵が、町内の平和と昼寝時間を守るミステリー風コメディ。",
     "salesStatus": "few-left"
   },
@@ -34,7 +34,7 @@
     "genre": "action",
     "rating": "PG12",
     "screen": 3,
-    "format": ["subtitled", "3D"],
+    "formats": ["subtitled", "3D"],
     "description": "定時退社を夢見る会社員が、残業怪人たちと戦う社会派っぽい変身アクション。",
     "salesStatus": "available"
   },
@@ -47,7 +47,7 @@
     "genre": "horror",
     "rating": "R15+",
     "screen": 1,
-    "format": ["dubbed", "4k"],
+    "formats": ["dubbed", "4k"],
     "description": "人間を襲うより労務改善を求めるゾンビたちの、妙に切実なホラー風人情劇。",
     "salesStatus": "sold-out"
   },
@@ -60,7 +60,7 @@
     "genre": "drama",
     "rating": "G",
     "screen": 4,
-    "format": ["subtitled", "2D"],
+    "formats": ["subtitled", "imax"],
     "description": "町内会の姫と呼ばれた女性が、夏祭りの予算不足に立ち向かう小さすぎる大河ドラマ。",
     "salesStatus": "available"
   },
@@ -73,7 +73,7 @@
     "genre": "comedy",
     "rating": "G",
     "screen": 5,
-    "format": ["dubbed", "2D"],
+    "formats": ["dubbed", "imax"],
     "description": "隠密任務に疲れた忍者たちが、ラテアートと接客に命を懸ける脱力コメディ。",
     "salesStatus": "few-left"
   },
@@ -86,7 +86,7 @@
     "genre": "fantasy",
     "rating": "PG12",
     "screen": 1,
-    "format": ["subtitled", "4k"],
+    "formats": ["subtitled", "4k"],
     "description": "賞味期限に支配された冷蔵庫王国で、最後の武士ハムが反乱を起こす異世界ファンタジー。",
     "salesStatus": "available"
   },
@@ -99,7 +99,7 @@
     "genre": "action",
     "rating": "G",
     "screen": 2,
-    "format": ["dubbed", "3D"],
+    "formats": ["dubbed", "3D"],
     "description": "焼きたての誇りを胸に、メロンパンが閉店間際のパン屋を駆け抜ける疾走アクション。",
     "salesStatus": "few-left"
   },
@@ -112,7 +112,7 @@
     "genre": "drama",
     "rating": "G",
     "screen": 3,
-    "format": ["subtitled", "2D"],
+    "formats": ["subtitled", "imax"],
     "description": "出世街道から少し外れた普通の課長が、コピー機の紙詰まりから会社を救う企業ドラマ。",
     "salesStatus": "available"
   },
@@ -125,7 +125,7 @@
     "genre": "fantasy",
     "rating": "G",
     "screen": 4,
-    "format": ["dubbed", "2D"],
+    "formats": ["dubbed", "imax"],
     "description": "森で出会った謎の丸い存在と、微妙に著作権を避けながら友情を育むファンタジー。",
     "salesStatus": "sold-out"
   },
@@ -138,7 +138,7 @@
     "genre": "horror",
     "rating": "R15+",
     "screen": 5,
-    "format": ["subtitled", "4k"],
+    "formats": ["subtitled", "4k"],
     "description": "深夜の鮮魚売り場で、解凍されたマグロが静かに人類へ復讐を始める海鮮ホラー。",
     "salesStatus": "available"
   },
@@ -151,7 +151,7 @@
     "genre": "romance",
     "rating": "G",
     "screen": 1,
-    "format": ["dubbed", "2D"],
+    "formats": ["dubbed", "imax"],
     "description": "駅前の自動販売機が、毎朝ブラックコーヒーを買う会社員に片想いする無機質ラブストーリー。",
     "salesStatus": "few-left"
   },
@@ -164,7 +164,7 @@
     "genre": "horror",
     "rating": "PG12",
     "screen": 2,
-    "format": ["subtitled", "3D"],
+    "formats": ["subtitled", "3D"],
     "description": "終わらない会議に取り残された亡霊が、議事録の修正依頼で現世に復讐するオフィスホラー。",
     "salesStatus": "available"
   },
@@ -177,7 +177,7 @@
     "genre": "sf",
     "rating": "G",
     "screen": 1,
-    "format": ["dubbed", "4k"],
+    "formats": ["dubbed", "4k"],
     "description": "具材不足の未来で、最後の梅干しをめぐり米粒たちが宇宙戦争を始める食品SF。",
     "salesStatus": "available"
   },
@@ -190,7 +190,7 @@
     "genre": "romance",
     "rating": "G",
     "screen": 2,
-    "format": ["subtitled", "2D"],
+    "formats": ["subtitled", "imax"],
     "description": "移動速度より未練の処理速度が遅い二人を描く、やや面倒くさい青春ラブストーリー。",
     "salesStatus": "few-left"
   },
@@ -203,7 +203,7 @@
     "genre": "fantasy",
     "rating": "PG12",
     "screen": 3,
-    "format": ["dubbed", "3D"],
+    "formats": ["dubbed", "3D"],
     "description": "火を吹く部長が稟議書を握りつぶす王国で、若手社員が承認フローを突破する冒険譚。",
     "salesStatus": "available"
   },
@@ -216,7 +216,7 @@
     "genre": "comedy",
     "rating": "G",
     "screen": 4,
-    "format": ["subtitled", "4k"],
+    "formats": ["subtitled", "4k"],
     "description": "寝坊をなかったことにするため、青年が布団型タイムマシンで朝へ戻る時間旅行コメディ。",
     "salesStatus": "sold-out"
   },
@@ -229,7 +229,7 @@
     "genre": "action",
     "rating": "PG12",
     "screen": 5,
-    "format": ["dubbed", "2D"],
+    "formats": ["dubbed", "imax"],
     "description": "屋台を守る寡黙な元職人が、ソース利権に群がる悪党を鉄板で制圧する粉もんアクション。",
     "salesStatus": "available"
   },
@@ -242,7 +242,7 @@
     "genre": "romance",
     "rating": "G",
     "screen": 1,
-    "format": ["subtitled", "2D"],
+    "formats": ["subtitled", "imax"],
     "description": "入れ替わった相手の名前がどうしても思い出せない二人の、記憶力に難がある恋物語。",
     "salesStatus": "few-left"
   },
@@ -255,7 +255,7 @@
     "genre": "drama",
     "rating": "R15+",
     "screen": 3,
-    "format": ["dubbed", "4k"],
+    "formats": ["dubbed", "4k"],
     "description": "突如巨大化した残業が都市を飲み込み、労務担当と新人社員が退勤の希望を取り戻す社会派怪獣映画。",
     "salesStatus": "available"
   }
