@@ -2,10 +2,10 @@
 import type {
   SalesStatus,
   Genre,
-  Format,
+  Formats,
 } from '@/constants/screenings';
 
-export type { SalesStatus, Genre, Format };
+export type { SalesStatus, Genre, Formats };
 
 // レーティングの型定義
 type Rating =
@@ -24,7 +24,7 @@ export type Screening = {
   genre: Genre;
   rating: Rating;
   screen: number;
-  formats: Format[];
+  formats: Formats[];
   description: string;
   salesStatus: SalesStatus;
   thumbnail: string;

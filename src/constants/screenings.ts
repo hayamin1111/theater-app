@@ -25,4 +25,4 @@ export const SALES_STATUS = {
 // 定数から型を生成
 export type SalesStatus = keyof typeof SALES_STATUS;
 export type Genre = keyof typeof GENRES;
-export type Format = keyof typeof FORMATS;
+export type Formats = keyof typeof FORMATS;
