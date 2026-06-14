@@ -97,8 +97,8 @@ function App() {
 	return (
 		<div className="mx-auto flex min-h-screen max-w-[1800px] flex-col px-4 py-6 sm:px-6 lg:px-8 lg:py-12 text-neutral-950">
 			<header className="space-y-8 xl:space-y-10">
-				<h1 className="text-2xl font-black sm:text-3xl lg:text-4xl">
-					上映スケジュール
+				<h1 className="flex flex-row-reverse justify-end items-center gap-1 text-2xl font-black sm:text-3xl lg:text-4xl">
+					上映スケジュール <img src="/images/icon.svg" className="w-9 sm:w-10 lg:w-12" alt="" />
 				</h1>
 
 				<div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">

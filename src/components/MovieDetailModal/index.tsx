@@ -1,6 +1,6 @@
+import { useEffect, useRef } from "react";
 import { FORMATS, GENRES, SALES_STATUS } from "@/constants/screenings";
 import type { Screening } from "@/types/screening";
-import { useEffect, useRef } from "react";
 
 type Props = {
 	screening: Screening;
@@ -29,6 +29,11 @@ export const MovieDetailModal = ({ screening, onClose, formatDate }: Props) => {
 			onClose={onClose}
 			onClick={(event) => {
 				if (event.target === event.currentTarget) {
+					dialogRef.current?.close();
+				}
+			}}
+			onKeyDown={(event) => {
+				if (event.key === "Escape") {
 					dialogRef.current?.close();
 				}
 			}}

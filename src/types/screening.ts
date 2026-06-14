@@ -1,7 +1,7 @@
 // 定数から生成した型をimport
-import type { SalesStatus, Genre, Format } from "@/constants/screenings";
+import type { Format, Genre, SalesStatus } from "@/constants/screenings";
 
-export type { SalesStatus, Genre, Format };
+export type { Format, Genre, SalesStatus };
 
 // レーティングの型定義
 type Rating = "G" | "PG12" | "R15+" | "R18+";
