@@ -75,24 +75,22 @@ function App() {
 	}, []);
 
 	return (
-		<div className="min-h-screen bg-[linear-gradient(180deg,#f6f7f5_0%,#eef2ef_48%,#e7ece9_100%)] text-neutral-950">
-			<div className="mx-auto flex min-h-screen max-w-[1800px] flex-col px-4 py-6 sm:px-6 lg:px-8">
-				<header className="space-y-8">
+		<div className="min-h-screen bg-white text-neutral-950">
+			<div className="mx-auto flex min-h-screen max-w-[1800px] flex-col px-4 py-6 sm:px-6 lg:px-8 lg:py-12">
+				<header className="space-y-10">
 					<div className="flex items-start justify-between gap-6">
-						<div className="space-y-3">
-							<h1 className="text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
-								上映スケジュール
-							</h1>
-						</div>
+						<h1 className="text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
+							上映スケジュール
+						</h1>
 					</div>
 
-					<div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
+					<div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
 						<DateTabs
 							dates={dates}
 							selectedDate={selectedDate}
 							onSelectDate={setSelectedDate}
 						/>
-						<div className="flex flex-1 flex-wrap justify-start gap-3 xl:justify-end">
+						<div className="flex flex-1 flex-wrap justify-start items-center gap-5 xl:justify-end">
 							<SearchInput
 								searchKeyword={searchKeyword}
 								onSearchKeyword={setSearchKeyword}
@@ -110,20 +108,20 @@ function App() {
 						</div>
 					</div>
 
-					<div className="flex flex-col gap-2 border-l-4 border-[#5f9f97] pl-4">
-						<h2 className="text-2xl font-black tracking-tight sm:text-3xl">
+					<div className="flex flex-col gap-2 border-l-4 border-[#ea6a2a] pl-2">
+						<h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
 							{selectedDate ? formatHeadingDate(selectedDate) : ""}
 						</h2>
 					</div>
 				</header>
 
 				<main className="mt-8 flex-1">
-					<section className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
+					<div className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
 						<Timetable
 							screenings={timetableScreenings}
 							onSelectedScreening={setSelectedScreening}
 						/>
-					</section>
+					</div>
 				</main>
 
 				{selectedScreening && (

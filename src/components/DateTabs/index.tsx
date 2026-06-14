@@ -11,16 +11,16 @@ const formatDateLabel = (date: string) => {
 
 export const DateTabs = ({ dates, selectedDate, onSelectDate }: Props) => {
 	return (
-		<ul className="flex flex-nowrap items-center gap-3 overflow-x-auto pb-1">
+		<ul className="flex flex-nowrap flex-1 items-center gap-3">
 			{dates.map((date) => (
-				<li key={date} className="list-none">
+				<li key={date} className="flex-1 list-none max-w-50">
 					<button
 						type="button"
 						onClick={() => onSelectDate(date)}
-						className={`min-w-[128px] rounded-xl border px-5 py-3 text-lg font-black tracking-tight transition ${
+						className={`w-full rounded-md border px-2 py-2 leading-none text-lg font-semibold tracking-tight transition hover:cursor-pointer ${
 							selectedDate === date
-								? "border-[#5f9f97] bg-[#5f9f97] text-white"
-								: "border-transparent bg-neutral-200 text-neutral-600 hover:bg-neutral-300"
+								? "border-[#ea6a2a] bg-[#ea6a2a] text-white"
+								: "border-transparent bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
 						}`}
 						aria-pressed={selectedDate === date}
 					>

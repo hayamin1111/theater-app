@@ -26,7 +26,8 @@ export const GenresFilterCheckboxes = ({
 	};
 
 	return (
-		<div className="flex flex-wrap gap-2">
+		<div className="flex items-center flex-wrap gap-2">
+      <h2 className="text-sm font-bold">ジャンル</h2>
 			{genres.map((genre) => (
 				<label key={genre} className="inline-flex cursor-pointer">
 					<input
@@ -37,7 +38,7 @@ export const GenresFilterCheckboxes = ({
 						checked={selectedGenres.includes(genre)}
 						onChange={handleSelectedGenre}
 					/>
-					<span className="inline-flex items-center rounded-sm border border-neutral-300 bg-white px-3 py-2 text-sm text-neutral-700 transition peer-checked:border-[#5f9f97] peer-checked:bg-[#5f9f97] peer-checked:text-white">
+					<span className="inline-flex items-center rounded-sm border border-neutral-300 bg-white px-3 py-2 leading-none text-sm text-neutral-700 transition peer-checked:border-[#ea6a2a] peer-checked:bg-[#ea6a2a] peer-checked:text-white">
 						{GENRES[genre]}
 					</span>
 				</label>

@@ -12,8 +12,8 @@ const END_HOUR = 23;
 
 const salesStatusClassName: Record<Screening["salesStatus"], string> = {
 	available: "bg-neutral-100 text-neutral-700 border-neutral-200",
-	"few-left": "bg-[#5f9f97]/10 text-[#5f9f97] border-[#5f9f97]/20",
-	"sold-out": "bg-neutral-900 text-white border-neutral-900",
+	"few-left": "bg-[#ea6a2a] text-white",
+	"sold-out": "bg-neutral-950 text-white border-neutral-950",
 };
 
 const timeToRow = (time: string) => {
@@ -36,7 +36,7 @@ const ScreenHeader = () => {
 
 	return (
 		<>
-			<div style={{ gridColumn: 1, gridRow: 1 }} className="bg-neutral-100" />
+			<div style={{ gridColumn: 1, gridRow: 1 }} className="bg-neutral-200" />
 			{screenNums.map((screen) => (
 				<div
 					key={screen}
@@ -44,9 +44,9 @@ const ScreenHeader = () => {
 						gridColumn: screen + 1,
 						gridRow: 1,
 					}}
-					className="flex items-center justify-center bg-neutral-100 px-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-neutral-600"
+					className="flex items-center justify-center bg-neutral-200 px-2 text-[11px] font-semibold tracking-[0.16em] text-neutral-600"
 				>
-					<span>第{screen}会場</span>
+					<span>スクリーン{screen}</span>
 				</div>
 			))}
 		</>
@@ -89,8 +89,8 @@ const TimeAxis = () => {
 
 export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
 	return (
-		<div className="min-w-[1280px] overflow-visible bg-neutral-200">
-			<div className="grid grid-cols-[80px_repeat(10,minmax(200px,1fr))] auto-rows-[50px] gap-px bg-neutral-200">
+		<div className="overflow-scroll bg-neutral-100">
+			<div className="min-w-7xl grid grid-cols-[50px_repeat(10,minmax(200px,1fr))] grid-rows-[40px] auto-rows-[70px] gap-px bg-neutral-100">
 				<ScreenHeader />
 				<TimeAxis />
 
@@ -103,7 +103,7 @@ export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
 						<button
 							key={screening.id}
 							type="button"
-							className="flex h-full w-full flex-col justify-between gap-2 overflow-hidden bg-white p-3 text-left transition hover:text-[#5f9f97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5f9f97]"
+							className="flex h-full w-full flex-col justify-between gap-2 overflow-hidden bg-white p-3 text-left transition focus-visible:outline-none focus:border-[#ea6a2a] focus:ring-2 focus:ring-[#ea6a2a]/20 hover:cursor-pointer hover:border-[#ea6a2a] hover:ring-2 hover:ring-[#ea6a2a]/20 hover:z-10"
 							style={{
 								gridColumn: column,
 								gridRow: `${rowStart} / ${rowEnd}`,
@@ -111,24 +111,24 @@ export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
 							onClick={() => onSelectedScreening(screening)}
 						>
 							<div className="space-y-2">
-								<div className="flex flex-wrap items-start justify-between gap-2">
-									<h3 className="break-words text-[13px] font-semibold leading-5 text-neutral-950">
-										{screening.title}
-									</h3>
+								<h3 className="wrap-break-word text-[13px] font-semibold leading-5 text-neutral-950">
+									{screening.title}
+								</h3>
+								<div className="flex flex-wrap items-center justify-between gap-3">
+									<span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
+										{GENRES[screening.genre]}
+									</span>
 									<span
 										className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-semibold leading-none ${salesStatusClassName[screening.salesStatus]}`}
 									>
 										{SALES_STATUS[screening.salesStatus]}
 									</span>
 								</div>
-								<p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
-									{GENRES[screening.genre]}
-								</p>
-								<div className="flex flex-wrap gap-1.5">
+								<div className="flex flex-wrap gap-1">
 									{screening.formats.map((format) => (
 										<span
 											key={format}
-											className="inline-flex items-center rounded-full border border-neutral-300 bg-[#f3f7f5] px-2 py-0.5 text-[10px] font-semibold text-neutral-700"
+											className="inline-flex items-center rounded-full border border-neutral-300 bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-700"
 										>
 											{FORMATS[format]}
 										</span>

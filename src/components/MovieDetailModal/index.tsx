@@ -20,12 +20,8 @@ export const MovieDetailModal = ({ screening, onClose }: Props) => {
 					onClose();
 				}
 			}}
-			className="fixed inset-0 z-50 m-0 grid h-screen w-screen max-w-none place-items-center bg-transparent p-4"
+			className="fixed inset-0 z-50 m-0 grid h-screen w-screen max-w-none place-items-center bg-transparent p-4 backdrop:bg-neutral-950/45 backdrop:backdrop-blur-[2px]"
 		>
-			<div
-				className="absolute inset-0 bg-neutral-950/45 backdrop-blur-[2px]"
-				aria-hidden="true"
-			/>
 			<div className="relative w-full max-w-2xl overflow-hidden rounded-[28px] border border-neutral-200 bg-white">
 				<div className="flex items-start justify-between gap-4 border-b border-neutral-100 px-6 py-5">
 					<div className="space-y-2">
@@ -39,9 +35,9 @@ export const MovieDetailModal = ({ screening, onClose }: Props) => {
 					<button
 						type="button"
 						onClick={onClose}
-						className="rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-700 transition hover:border-[#5f9f97] hover:text-[#5f9f97]"
+						className="w-10 h-10 rounded-full border border-neutral-300 bg-white leading-none text-sm text-neutral-700 transition hover:border-[#ea6a2a] hover:text-[#ea6a2a]"
 					>
-						とじる
+						×
 					</button>
 				</div>
 				<div className="grid gap-6 px-6 py-6 md:grid-cols-[1fr_240px]">
@@ -49,7 +45,7 @@ export const MovieDetailModal = ({ screening, onClose }: Props) => {
 						<p className="text-sm font-medium text-neutral-600">
 							<time dateTime={screening.startTime}>{screening.startTime}</time>{" "}
 							- <time dateTime={screening.endTime}>{screening.endTime}</time> /{" "}
-							{screening.screen}会場
+							スクリーン{screening.screen}
 						</p>
 						<p className="leading-7 text-neutral-700">
 							{screening.description}
@@ -80,7 +76,7 @@ export const MovieDetailModal = ({ screening, onClose }: Props) => {
 								{screening.formats.map((format) => (
 									<span
 										key={format}
-										className="inline-flex items-center rounded-full border border-neutral-300 bg-[#f3f7f5] px-2.5 py-1 text-xs font-semibold text-neutral-700"
+										className="inline-flex items-center rounded-full border border-neutral-300 bg-white px-2.5 py-1 text-xs font-semibold text-neutral-700"
 									>
 										{FORMATS[format]}
 									</span>
