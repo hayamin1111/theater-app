@@ -27,7 +27,7 @@ export const FormatsFilterCheckboxes = ({
 
 	return (
 		<div className="flex items-center flex-wrap gap-2">
-      <h2 className="text-sm font-bold">上映形式</h2>
+			<h2 className="text-sm font-bold">上映形式</h2>
 			{formats.map((format) => (
 				<label key={format} className="inline-flex cursor-pointer">
 					<input

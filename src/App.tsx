@@ -6,7 +6,6 @@ import { GenresFilterCheckboxes } from "@/components/GenresFilterCheckboxes";
 import { MovieDetailModal } from "@/components/MovieDetailModal";
 import { SearchInput } from "@/components/SearchInput";
 import { Timetable } from "@/components/Timetable";
-import { FORMATS, GENRES } from "@/constants/screenings";
 import type { Format, Genre, Screening } from "@/types/screening";
 
 const formatHeadingDate = (date: string) => {
@@ -15,6 +14,8 @@ const formatHeadingDate = (date: string) => {
 };
 
 function App() {
+	const [isLoading, setIsLoading] = useState(true);
+	const [error, setError] = useState<string | null>(null);
 	const [screenings, setScreenings] = useState<Screening[]>([]);
 	const [selectedScreening, setSelectedScreening] = useState<Screening | null>(
 		null,
@@ -24,113 +25,136 @@ function App() {
 	const [selectedGenres, setSelectedGenres] = useState<Genre[]>([]);
 	const [selectedFormats, setSelectedFormats] = useState<Format[]>([]);
 
-	const dates = [
-		...new Set(screenings.map((screening) => screening.date)),
-	].sort();
-	const genres = [
-		...new Set(screenings.map((screening) => screening.genre)),
-	].sort((left, right) => GENRES[left].localeCompare(GENRES[right], "ja"));
+	const dates = [...new Set(screenings.map((screening) => screening.date))]; //重複をなくした日付
+	const genres = [...new Set(screenings.map((screening) => screening.genre))]; //重複をなくしたジャンル
 	const formats = [
 		...new Set(screenings.flatMap((screening) => screening.formats)),
-	].sort((left, right) => FORMATS[left].localeCompare(FORMATS[right], "ja"));
+	]; //重複をなくした上映形式
 
+	// フィルタリング
 	const filteredScreenings = screenings
-		.filter((screening) => screening.date === selectedDate)
+		.filter((screening) => screening.date === selectedDate) // 日付
 		.filter((screening) =>
 			screening.title.toLowerCase().includes(searchKeyword.toLowerCase()),
-		)
+		) //文字列検索
 		.filter(
 			(screening) =>
 				selectedGenres.length === 0 || selectedGenres.includes(screening.genre),
-		)
+		) // ジャンル（or検索）。選択なしで全件表示。
 		.filter(
 			(screening) =>
 				selectedFormats.length === 0 ||
 				selectedFormats.some((format) => screening.formats.includes(format)),
-		);
+		); // 上映形式（or検索）。複数選択可。選択なしで全件表示。
 
-	const timetableScreenings = [...filteredScreenings].sort((left, right) => {
-		const startCompare = left.startTime.localeCompare(right.startTime);
-		if (startCompare !== 0) return startCompare;
-
-		const screenCompare = left.screen - right.screen;
-		if (screenCompare !== 0) return screenCompare;
-
-		return left.title.localeCompare(right.title, "ja");
-	});
-
+	/**
+	 * 初回レンダリング
+	 */
 	useEffect(() => {
 		const init = async () => {
-			const data = await fetchScreenings();
-			setScreenings(data);
+			try {
+				// fetchScreeningsでjsonをstateに入れる
+				const data = await fetchScreenings();
+				setScreenings(data);
 
-			const days = [...new Set(data.map((item) => item.date))].sort();
-			const firstDay = days[0];
-			if (firstDay) {
-				setSelectedDate(firstDay);
+				// 生dataから日付を取得し昇順にソート
+				const days = [...new Set(data.map((item) => item.date))].sort();
+				const firstDay = days[0];
+
+				// 上映初日を取得しstateに入れる
+				if (firstDay) {
+					setSelectedDate(firstDay);
+				}
+			} catch {
+				setError("上映スケジュールの取得に失敗しました");
+			} finally {
+				//ローディング用
+				setIsLoading(false);
 			}
 		};
 
 		init();
 	}, []);
 
+	//エラー
+	if (error) {
+		return (
+			<main className="min-h-screen">
+				<p className="m-6">{error}</p>
+			</main>
+		);
+	}
+
+	//データ取得中は本体を描画しない
+	if (isLoading) {
+		return (
+			<main className="min-h-screen">
+				<p className="m-6">上映スケジュールを読み込んでいます</p>
+			</main>
+		);
+	}
+
 	return (
-		<div className="min-h-screen bg-white text-neutral-950">
-			<div className="mx-auto flex min-h-screen max-w-[1800px] flex-col px-4 py-6 sm:px-6 lg:px-8 lg:py-12">
-				<header className="space-y-10">
-					<div className="flex items-start justify-between gap-6">
-						<h1 className="text-2xl font-black tracking-tight sm:text-3xl lg:text-4xl">
-							上映スケジュール
-						</h1>
-					</div>
+		<div className="mx-auto flex min-h-screen max-w-[1800px] flex-col px-4 py-6 sm:px-6 lg:px-8 lg:py-12 text-neutral-950">
+			<header className="space-y-8 xl:space-y-10">
+				<h1 className="text-2xl font-black sm:text-3xl lg:text-4xl">
+					上映スケジュール
+				</h1>
 
-					<div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
-						<DateTabs
-							dates={dates}
-							selectedDate={selectedDate}
-							onSelectDate={setSelectedDate}
+				<div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+					<DateTabs
+						dates={dates}
+						selectedDate={selectedDate}
+						onSelectDate={setSelectedDate}
+					/>
+					<div className="flex flex-1 flex-wrap justify-start items-center gap-5 xl:justify-end">
+						<SearchInput
+							searchKeyword={searchKeyword}
+							onSearchKeyword={setSearchKeyword}
 						/>
-						<div className="flex flex-1 flex-wrap justify-start items-center gap-5 xl:justify-end">
-							<SearchInput
-								searchKeyword={searchKeyword}
-								onSearchKeyword={setSearchKeyword}
-							/>
-							<GenresFilterCheckboxes
-								genres={genres}
-								selectedGenres={selectedGenres}
-								onSelectedGenres={setSelectedGenres}
-							/>
-							<FormatsFilterCheckboxes
-								formats={formats}
-								selectedFormats={selectedFormats}
-								onSelectedFormats={setSelectedFormats}
-							/>
-						</div>
+						<GenresFilterCheckboxes
+							genres={genres}
+							selectedGenres={selectedGenres}
+							onSelectedGenres={setSelectedGenres}
+						/>
+						<FormatsFilterCheckboxes
+							formats={formats}
+							selectedFormats={selectedFormats}
+							onSelectedFormats={setSelectedFormats}
+						/>
 					</div>
+				</div>
 
-					<div className="flex flex-col gap-2 border-l-4 border-[#ea6a2a] pl-2">
-						<h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-							{selectedDate ? formatHeadingDate(selectedDate) : ""}
-						</h2>
-					</div>
-				</header>
+				<div className="flex flex-col gap-2 border-l-4 border-[#ea6a2a] pl-2">
+					<h2 className="text-2xl font-bold sm:text-3xl">
+						{selectedDate ? formatHeadingDate(selectedDate) : ""}
+					</h2>
+				</div>
+			</header>
 
-				<main className="mt-8 flex-1">
-					<div className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
+			<main className="mt-6 xl:mt-8 flex-1">
+				<p aria-live="polite">
+					<span className="font-bold">{filteredScreenings.length}</span>件の上映
+				</p>
+				{filteredScreenings.length === 0 ? (
+					<p>該当する上映作品はありません。検索条件を変更してください</p>
+				) : (
+					<div className="overflow-hidden rounded-xl border border-neutral-200 bg-white mt-2">
 						<Timetable
-							screenings={timetableScreenings}
+							screenings={filteredScreenings}
 							onSelectedScreening={setSelectedScreening}
 						/>
 					</div>
-				</main>
-
-				{selectedScreening && (
-					<MovieDetailModal
-						screening={selectedScreening}
-						onClose={() => setSelectedScreening(null)}
-					/>
 				)}
-			</div>
+			</main>
+
+			{selectedScreening && (
+				<MovieDetailModal
+					screening={selectedScreening}
+					onClose={() => setSelectedScreening(null)}
+					formatDate={formatHeadingDate}
+				/>
+			)}
 		</div>
 	);
 }

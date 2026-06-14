@@ -6,16 +6,20 @@ type Props = {
 	onSelectedScreening: (screening: Screening) => void;
 };
 
-const SLOT_MINUTES = 30;
-const START_HOUR = 10;
-const END_HOUR = 23;
+const SLOT_MINUTES = 30; //1セルの単位（分）
+const START_HOUR = 10; //開店時刻
+const END_HOUR = 23; //閉店時刻
 
+// ステータス用クラス
 const salesStatusClassName: Record<Screening["salesStatus"], string> = {
 	available: "bg-neutral-100 text-neutral-700 border-neutral-200",
 	"few-left": "bg-[#ea6a2a] text-white",
 	"sold-out": "bg-neutral-950 text-white border-neutral-950",
 };
 
+/**
+ * HH:MM形式の時刻文字列を受け取り、時間をグリッド上の行番号に変換
+ */
 const timeToRow = (time: string) => {
 	const [hour, minute] = time.split(":").map(Number);
 	const totalMinutes = hour * 60 + minute;
@@ -24,6 +28,9 @@ const timeToRow = (time: string) => {
 	return Math.floor((totalMinutes - startMinutes) / SLOT_MINUTES);
 };
 
+/**
+ * HH:MM形式の開始時刻と終了時刻から、上映時間を分単位でだす
+ */
 const getDurationMinutes = (startTime: string, endTime: string) => {
 	const [startHour, startMinute] = startTime.split(":").map(Number);
 	const [endHour, endMinute] = endTime.split(":").map(Number);
@@ -31,8 +38,11 @@ const getDurationMinutes = (startTime: string, endTime: string) => {
 	return endHour * 60 + endMinute - (startHour * 60 + startMinute);
 };
 
+/**
+ * タイムテーブルのスクリーン番号行を生成するコンポーネント
+ */
 const ScreenHeader = () => {
-	const screenNums = Array.from({ length: 10 }, (_, index) => index + 1);
+	const screenNums = Array.from({ length: 10 }, (_, index) => index + 1); //連番の入った配列生成
 
 	return (
 		<>
@@ -44,7 +54,7 @@ const ScreenHeader = () => {
 						gridColumn: screen + 1,
 						gridRow: 1,
 					}}
-					className="flex items-center justify-center bg-neutral-200 px-2 text-[11px] font-semibold tracking-[0.16em] text-neutral-600"
+					className="flex items-center justify-center bg-neutral-200 px-2 text-[11px] font-semibold text-neutral-600"
 				>
 					<span>スクリーン{screen}</span>
 				</div>
@@ -53,10 +63,17 @@ const ScreenHeader = () => {
 	);
 };
 
+/**
+ * タイムテーブルの時刻算出
+ * @param startTime 開店時刻
+ * @param endTime 閉店時刻
+ * @param slot 間隔
+ * @returns 間隔ごとの時刻の入った配列 [ "10:00", "10:30", "11:00", ...]
+ */
 const createTimeSlots = () => {
 	const start = START_HOUR * 60;
 	const end = END_HOUR * 60;
-	const length = Math.floor((end - start) / SLOT_MINUTES) + 1;
+	const length = Math.floor((end - start) / SLOT_MINUTES) + 1; // +1： 終了時間の要素分1つ多くする
 
 	return Array.from({ length }, (_, index) => {
 		const totalMinutes = start + index * SLOT_MINUTES;
@@ -68,6 +85,9 @@ const createTimeSlots = () => {
 
 const timeSlots = createTimeSlots();
 
+/**
+ * タイムテーブルの時刻列を生成するコンポーネント
+ */
 const TimeAxis = () => {
 	return (
 		<>
@@ -75,12 +95,15 @@ const TimeAxis = () => {
 				<div
 					key={time}
 					style={{
-						gridColumn: 1,
+						gridColumn: 1, //1列目固定
 						gridRow: timeToRow(time) + 2,
 					}}
-					className="flex items-start justify-end bg-white px-2 pt-2 text-[11px] font-medium tabular-nums text-neutral-500"
+					className="flex items-start justify-end bg-white px-2 pt-2 text-[11px] font-medium tabular-nums text-neutral-500 sticky left-0 z-20"
 				>
-					{index % 2 === 0 ? time : ""}
+					{
+						// 1時間ごとに時間軸を表示させる（2=60/30）
+						index % 2 === 0 ? time : ""
+					}
 				</div>
 			))}
 		</>
@@ -95,9 +118,9 @@ export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
 				<TimeAxis />
 
 				{screenings.map((screening) => {
-					const rowStart = timeToRow(screening.startTime) + 2;
-					const rowEnd = timeToRow(screening.endTime) + 2;
-					const column = screening.screen + 1;
+					const rowStart = timeToRow(screening.startTime) + 2; //3行目が開始時間のため+2とする
+					const rowEnd = timeToRow(screening.endTime) + 2; // 同上
+					const column = screening.screen + 1; //1列目は上映時間が入るため+1とする
 
 					return (
 						<button
@@ -115,7 +138,7 @@ export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
 									{screening.title}
 								</h3>
 								<div className="flex flex-wrap items-center justify-between gap-3">
-									<span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
+									<span className="text-[11px] font-semibold uppercasetext-neutral-500">
 										{GENRES[screening.genre]}
 									</span>
 									<span
