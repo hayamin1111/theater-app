@@ -26,8 +26,10 @@ export const GenresFilterCheckboxes = ({
 	};
 
 	return (
-		<div className="relative flex w-full flex-wrap items-center gap-2 pt-7 sm:pl-25 sm:pt-0">
-			<h2 className="absolute top-0 left-0 text-xs font-normal tracking-[0.16em] text-(--color-cinema-muted) sm:top-2.5">ジャンル</h2>
+		<fieldset className="relative flex min-w-0 w-full flex-wrap items-center gap-2 pt-7 sm:pl-25 sm:pt-0">
+			<legend className="absolute top-0 left-0 text-xs font-normal tracking-[0.16em] text-(--color-cinema-muted) sm:top-2.5">
+				ジャンル
+			</legend>
 			{genres.map((genre) => (
 				<label key={genre} className="inline-flex cursor-pointer">
 					<input
@@ -43,6 +45,6 @@ export const GenresFilterCheckboxes = ({
 					</span>
 				</label>
 			))}
-		</div>
+		</fieldset>
 	);
 };

@@ -118,7 +118,7 @@ const TimeAxis = () => {
 export const Timetable = ({ screenings, onSelectedScreening }: Props) => {
   return (
     <div className="isolate overflow-x-auto bg-(--color-cinema-bg) pb-4">
-      <div className="grid min-w-[1916px] grid-cols-[76px_repeat(8,minmax(230px,1fr))] grid-rows-[54px] auto-rows-[80px] bg-(--color-cinema-bg) bg-[linear-gradient(to_bottom,var(--color-cinema-grid)_1px,transparent_1px),linear-gradient(to_right,var(--color-cinema-grid)_1px,transparent_1px)] bg-size-[100%_80px,calc((100%-76px)/8)_100%] bg-position-[76px_54px]">
+      <div className="grid min-w-[1916px] grid-cols-[50px_repeat(8,minmax(180px,1fr))] grid-rows-[42px] auto-rows-[80px] bg-(--color-cinema-bg) bg-[linear-gradient(to_bottom,var(--color-cinema-grid)_1px,transparent_1px),linear-gradient(to_right,var(--color-cinema-grid)_1px,transparent_1px)] bg-size-[100%_80px,calc((100%-50px)/8)_100%] bg-position-[50px_42px]">
         <ScreenHeader />
         <TimeAxis />
 
