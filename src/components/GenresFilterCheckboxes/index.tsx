@@ -26,8 +26,8 @@ export const GenresFilterCheckboxes = ({
 	};
 
 	return (
-		<div className="flex items-center flex-wrap gap-2">
-			<h2 className="text-sm font-bold">ジャンル</h2>
+		<div className="relative flex w-full flex-wrap items-center gap-2 pt-7 sm:pl-25 sm:pt-0">
+			<h2 className="absolute top-0 left-0 text-xs font-normal tracking-[0.16em] text-(--color-cinema-muted) sm:top-2.5">ジャンル</h2>
 			{genres.map((genre) => (
 				<label key={genre} className="inline-flex cursor-pointer">
 					<input
@@ -38,7 +38,7 @@ export const GenresFilterCheckboxes = ({
 						checked={selectedGenres.includes(genre)}
 						onChange={handleSelectedGenre}
 					/>
-					<span className="inline-flex items-center rounded-sm border border-neutral-300 bg-white px-3 py-2 leading-none text-sm text-neutral-700 transition peer-checked:border-[#ea6a2a] peer-checked:bg-[#ea6a2a] peer-checked:text-white">
+					<span className="inline-flex items-center rounded border border-(--color-cinema-border) bg-(--color-cinema-panel) px-4 py-2 text-sm leading-none text-(--color-cinema-muted) transition-colors hover:border-(--color-cinema-gold) hover:text-(--color-cinema-ivory) peer-checked:border-(--color-cinema-red) peer-checked:bg-(--color-cinema-red) peer-checked:text-(--color-cinema-ivory) peer-focus-visible:outline-2 peer-focus-visible:outline-offset-3 peer-focus-visible:outline-(--color-cinema-gold)">
 						{GENRES[genre]}
 					</span>
 				</label>

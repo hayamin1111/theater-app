@@ -1,9 +1,6 @@
 # Theater Schedule App
 
-映画館の上映スケジュールを想定した、React製のタイムテーブルです。
-
-上映データをAPIから取得し、日付の切り替え、作品名検索、ジャンル・上映形式による複数条件の絞り込みができます。
-
+映画館の上映スケジュールを想定したWebアプリケーションです。React・TypeScriptで開発しています。上映データをAPIから取得し、複数スクリーンの上映予定をタイムテーブルで一覧表示、日付や作品名、ジャンル、上映形式から絞り込みができます。
 上映セルを選択すると、作品の詳細をモーダルで表示します。
 
 ## デモ
@@ -13,9 +10,9 @@
 
 ## スクリーンショット
 
-<img width="3160" height="2464" alt="Image" src="https://github.com/user-attachments/assets/2cbae332-495a-4d3a-be80-7e56c60005b5" />
+<img width="2720" height="1840" alt="トップページ画面" src="https://github.com/user-attachments/assets/e8b456f4-b2f9-4a16-a2ea-c7d7df8c3204" />
 
-<img width="3160" height="2464" alt="Image" src="https://github.com/user-attachments/assets/dd169ee9-85e5-4cf7-ba38-5e6a64b186c3" />
+<img width="2720" height="1840" alt="モーダル画面" src="https://github.com/user-attachments/assets/2e7340f5-4a71-489f-9fbb-e44f97ec1741" />
 
 ## 主な機能
 
@@ -166,13 +163,7 @@ npm run lint
 npm run build
 ```
 
-- Biomeによるリントエラーなし
-- TypeScript・Viteの本番ビルド成功
-- Lighthouse Performance：99
-
 ## 今後の改善候補
 
 - スマートフォン向けタイムテーブルUIの調整
 - 絞り込み条件の一括解除
-- ~~APIまたはCMSへのデータ移行~~ &rarr; 完了
-- コンポーネントテストの追加

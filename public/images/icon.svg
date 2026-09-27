@@ -1,32 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <g fill="#ea6a2a">
-    <circle cx="180" cy="170" r="60" />
-    
-    <circle cx="332" cy="170" r="60" />
-    
-    <rect x="150" y="220" width="212" height="130" rx="20" />
-    
-    <path d="M350 255 L410 230 C415 228 420 232 420 238 L420 312 C420 318 415 322 410 320 L350 295 Z" />
-    
-    <path d="M236 350 L200 420 C197 426 201 432 208 432 L220 432 L246 370 L266 370 L292 432 L304 432 C311 432 315 426 312 420 L276 350 Z" />
-  </g>
-  
-  <g fill="none" stroke="#ea6a2a" stroke-width="40">
-    <circle cx="180" cy="170" r="20" fill="none" opacity="0" />
-  </g>
-  
-  <circle cx="180" cy="170" r="20" fill="none" />
-  <mask id="reel-holes">
-    <rect width="512" height="512" fill="white" />
-    <circle cx="180" cy="170" r="20" fill="black" />
-    <circle cx="332" cy="170" r="20" fill="black" />
-  </mask>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 348.79 374.37">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask);
+      }
 
-  <g fill="#ea6a2a" mask="url(#reel-holes)">
-    <circle cx="180" cy="170" r="60" />
-    <circle cx="332" cy="170" r="60" />
-    <rect x="150" y="220" width="212" height="130" rx="20" />
-    <path d="M350 255 L410 230 C415 228 420 232 420 238 L420 312 C420 318 415 322 410 320 L350 295 Z" />
-    <path d="M236 350 L200 420 C197 426 201 432 208 432 L220 432 L246 370 L266 370 L292 432 L304 432 C311 432 315 426 312 420 L276 350 Z" />
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #d8b878;
+      }
+    </style>
+    <mask id="mask" x="-139.52" y="-127.89" width="595.28" height="595.28" maskUnits="userSpaceOnUse">
+      <g id="reel-holes">
+        <rect class="cls-2" x="-139.52" y="-127.89" width="595.28" height="595.28"/>
+        <circle cx="69.76" cy="69.76" r="23.25"/>
+        <circle cx="246.48" cy="69.76" r="23.25"/>
+      </g>
+    </mask>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g class="cls-1">
+      <g>
+        <circle class="cls-3" cx="69.76" cy="69.76" r="69.76"/>
+        <circle class="cls-3" cx="246.48" cy="69.76" r="69.76"/>
+        <rect class="cls-3" x="34.88" y="127.89" width="246.48" height="151.14" rx="23.25" ry="23.25"/>
+        <path class="cls-3" d="M267.41,168.58l69.76-29.07c5.81-2.33,11.63,2.33,11.63,9.3v86.04c0,6.98-5.81,11.63-11.63,9.3l-69.76-29.07v-46.51Z"/>
+        <path class="cls-3" d="M134.87,279.04l-41.86,81.39c-3.49,6.98,1.16,13.95,9.3,13.95h13.95l30.23-72.08h23.25l30.23,72.08h13.95c8.14,0,12.79-6.98,9.3-13.95l-41.86-81.39h-46.51Z"/>
+      </g>
+    </g>
   </g>
 </svg>
