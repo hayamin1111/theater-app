@@ -56,6 +56,13 @@
 
 詳細表示にはHTMLの `dialog` 要素を使用し、`useRef` から `showModal()` と `close()` を実行しています。モーダル表示中は背景スクロールを無効化しています。
 
+## AI活用
+
+本アプリの制作では、UIデザインとスタイリングに生成AIを活用しました。
+
+- Figma Make： UIデザインの生成
+- OpenAI Codex： Figma Makeで生成したデザイン画像をもとに、Tailwind CSSによるスタイリングを実装
+
 ## 使用技術
 
 | 名前         | バージョン |
