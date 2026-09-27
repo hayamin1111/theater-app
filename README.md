@@ -8,30 +8,32 @@
 
 ## デモ
 
-* 公開URL：デプロイ後に追記
-* [リポジトリ](https://github.com/hayamin1111/theater-app)
+- [公開URL](https://theater.ehykw.com/)
+- [リポジトリ](https://github.com/hayamin1111/theater-app)
 
 ## スクリーンショット
+
 <img width="3160" height="2464" alt="Image" src="https://github.com/user-attachments/assets/2cbae332-495a-4d3a-be80-7e56c60005b5" />
 
 <img width="3160" height="2464" alt="Image" src="https://github.com/user-attachments/assets/dd169ee9-85e5-4cf7-ba38-5e6a64b186c3" />
 
 ## 主な機能
 
-* 日付別の上映スケジュール表示
-* 作品名による部分一致検索
-* ジャンルの複数選択によるOR絞り込み
-* 上映形式の複数選択によるOR絞り込み
-* 開始・終了時刻に応じたタイムテーブル配置
-* 上映作品の詳細モーダル
-* 検索結果件数の表示
-* 検索結果が0件の場合の案内表示
-* データ取得中のローディング表示
-* データ取得失敗時のエラー表示
+- 日付別の上映スケジュール表示
+- 作品名による部分一致検索
+- ジャンルの複数選択によるOR絞り込み
+- 上映形式の複数選択によるOR絞り込み
+- 開始・終了時刻に応じたタイムテーブル配置
+- 上映作品の詳細モーダル
+- 検索結果件数の表示
+- 検索結果が0件の場合の案内表示
+- データ取得中のローディング表示
+- データ取得失敗時のエラー表示
 
 ## 実装上のポイント
 
 ### データはmockAPIで生成
+
 [mockAPI](https://mockapi.io)で作成したダミーAPIから上映データを取得しています。
 
 アプリの初回表示時に `fetch()` でJSON全体を取得し、取得後の検索・絞り込み処理はクライアント側で行っています。
@@ -66,15 +68,14 @@
 
 ## 使用技術
 
-| 名前          |           バージョン |
-| ------------ | ------------------: |
-| Node.js      |             22.17.0 |
-| React        |              19.2.6 |
-| Vite         |              8.0.12 |
-| TypeScript   |               6.0.2 |
-| Tailwind CSS |               4.3.1 |
-| Biome        |               2.5.0 |
-
+| 名前         | バージョン |
+| ------------ | ---------: |
+| Node.js      |    22.17.0 |
+| React        |     19.2.6 |
+| Vite         |     8.0.12 |
+| TypeScript   |      6.0.2 |
+| Tailwind CSS |      4.3.1 |
+| Biome        |      2.5.0 |
 
 ## セットアップ
 
@@ -147,16 +148,16 @@ src/
 
 ## 主なstate
 
-| state               | 型                   | 用途            |
-| ------------------- | ------------------- | ------------- |
-| `screenings`        | `Screening[]`       | 取得した上映データ     |
-| `selectedDate`      | `string`            | 選択中の日付        |
-| `searchKeyword`     | `string`            | 作品名の検索文字列     |
-| `selectedGenres`    | `Genre[]`           | 選択中のジャンル      |
-| `selectedFormats`   | `Format[]`          | 選択中の上映形式      |
+| state               | 型                  | 用途                       |
+| ------------------- | ------------------- | -------------------------- |
+| `screenings`        | `Screening[]`       | 取得した上映データ         |
+| `selectedDate`      | `string`            | 選択中の日付               |
+| `searchKeyword`     | `string`            | 作品名の検索文字列         |
+| `selectedGenres`    | `Genre[]`           | 選択中のジャンル           |
+| `selectedFormats`   | `Format[]`          | 選択中の上映形式           |
 | `selectedScreening` | `Screening \| null` | モーダルに表示する上映作品 |
-| `isLoading`         | `boolean`           | データ取得中かどうか    |
-| `error`             | `string \| null`    | データ取得エラー      |
+| `isLoading`         | `boolean`           | データ取得中かどうか       |
+| `error`             | `string \| null`    | データ取得エラー           |
 
 ## 品質確認
 
@@ -165,13 +166,13 @@ npm run lint
 npm run build
 ```
 
-* Biomeによるリントエラーなし
-* TypeScript・Viteの本番ビルド成功
-* Lighthouse Performance：99
+- Biomeによるリントエラーなし
+- TypeScript・Viteの本番ビルド成功
+- Lighthouse Performance：99
 
 ## 今後の改善候補
 
-* スマートフォン向けタイムテーブルUIの調整
-* 絞り込み条件の一括解除
-* ~~APIまたはCMSへのデータ移行~~ &rarr; 完了
-* コンポーネントテストの追加
+- スマートフォン向けタイムテーブルUIの調整
+- 絞り込み条件の一括解除
+- ~~APIまたはCMSへのデータ移行~~ &rarr; 完了
+- コンポーネントテストの追加
